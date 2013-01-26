@@ -1,0 +1,1184 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dexs-pm\n"
+"POT-Creation-Date: 2013-01-22 11:56+0100\n"
+"PO-Revision-Date: 2013-01-22 11:56+0100\n"
+"Last-Translator: \n"
+"Language-Team: SamBrishesWeb\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_n;_n_noop;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-SearchPath-2: ../admin\n"
+"X-Poedit-SearchPath-3: ../frontend\n"
+"X-Poedit-SearchPath-4: ../include\n"
+
+#: ../dexs-pm-system.php:76 ../admin/pm_settings.php:208
+msgid "New PM on"
+msgstr "Neue PN auf"
+
+#: ../dexs-pm-system.php:77 ../admin/pm_settings.php:209
+msgid ""
+"Welcome!\n"
+"\t\n"
+"A new message found his way to your inbox on our Website (<a href='%HOME_URL"
+"%'>%HOME_URL%</a>). This private message comes from <b>%SEND_NAME%</b> on "
+"%PM_DATE% at %PM_TIME% o'clock!\n"
+"\n"
+"<b>PM Subject:</b> %PM_SUB%\n"
+"<b>PM Excerpt:</b>\n"
+"%PM_EXC_120%...\n"
+"\n"
+"<a href='%PM_F_LINK%'>Go to your Inbox and answer!</a>\n"
+"\n"
+"You can deactivate this automatically System in your PM Settings on our "
+"Website!\n"
+"\n"
+"Yours Sincerely,\n"
+"%HOME_TIL%"
+msgstr ""
+"Willkommen!\n"
+"\t\n"
+"Eine neue Nachricht fand Ihren Weg in Deinen Posteingang (<a href=\"%HOME_URL"
+"%\">%HOME_URL%</a>). Diese private Nachricht kommt von <b>%SEND_NAME%</b> "
+"und wurde am %PM_DATE% umt %PM_TIME% Uhr geschrieben!\n"
+"\n"
+"<b>Betreff:</b> %PM_SUB%\n"
+"<b>Auszug:</b>\n"
+"%PM_EXC_120%...\n"
+"\n"
+"<a href=\"%PM_F_LINK%\">Schnell gehe zu Deinem Posteingang und antworte!</"
+"a>\n"
+"\n"
+"Du kannst das automatische Benachrichtigungssystem direkt auf unserer Seite, "
+"unter PN Einstellungen, deaktivieren!\n"
+"\n"
+"Mit freundlichen Grüßen,\n"
+"%HOME_TIL%"
+
+#: ../dexs-pm-system.php:91 ../admin/pm_settings.php:223
+msgid "This email is automatically generated. Please do not reply!"
+msgstr ""
+"Diese eMail wurde automatisch generiert, bitte antworten Sie nicht darauf!"
+
+#: ../dexs-pm-system.php:162 ../dexs-pm-system.php:164
+#: ../dexs-pm-system.php:172 ../dexs-pm-system.php:270
+#: ../dexs-pm-system.php:280 ../dexs-pm-system.php:281
+#: ../dexs-pm-system.php:282 ../dexs-pm-system.php:283
+#: ../dexs-pm-system.php:284 ../dexs-pm-system.php:285
+#: ../dexs-pm-system.php:302
+msgid "Private Messages"
+msgstr "Nachrichten"
+
+#: ../dexs-pm-system.php:165 ../dexs-pm-system.php:259
+#: ../dexs-pm-system.php:291 ../frontend/themes/the_system/send_form.php:93
+#: ../include/pm_tables.php:525
+msgid "Send PM"
+msgstr "PN Senden"
+
+#: ../dexs-pm-system.php:166
+msgid "PM Outbox"
+msgstr "Postausgang"
+
+#: ../dexs-pm-system.php:167
+msgid "PM Archive"
+msgstr "Archiv"
+
+#: ../dexs-pm-system.php:168
+msgid "PM Trash"
+msgstr "Papierkorb"
+
+#: ../dexs-pm-system.php:169
+msgid "PM Settings"
+msgstr "Einstellungen"
+
+#: ../dexs-pm-system.php:213
+msgid "General"
+msgstr "Allgemeine"
+
+#: ../dexs-pm-system.php:214
+msgid "Permissions"
+msgstr "Berechtigungen"
+
+#: ../dexs-pm-system.php:216 ../admin/pm_general.php:33
+#: ../admin/pm_help.php:50 ../frontend/themes/the_system/settings.php:27
+#: ../include/pm_tables.php:600
+msgid "eMail Notification"
+msgstr "eMail Benachrichtigungen"
+
+#: ../dexs-pm-system.php:260 ../dexs-pm-system.php:272
+#: ../dexs-pm-system.php:285 ../dexs-pm-system.php:292
+#: ../dexs-pm-system.php:304 ../frontend/themes/the_system/header.php:5
+#: ../frontend/themes/the_system/header.php:28
+#: ../frontend/themes/the_system/settings.php:6 ../include/pm_tables.php:67
+#: ../include/pm_tables.php:575
+msgid "Inbox"
+msgstr "Posteingang"
+
+#: ../dexs-pm-system.php:261 ../dexs-pm-system.php:273
+#: ../dexs-pm-system.php:281 ../dexs-pm-system.php:293
+#: ../dexs-pm-system.php:305 ../frontend/themes/the_system/header.php:10
+#: ../frontend/themes/the_system/header.php:31
+#: ../frontend/themes/the_system/settings.php:7 ../include/pm_tables.php:79
+#: ../include/pm_tables.php:576
+msgid "Outbox"
+msgstr "Postausgang"
+
+#: ../dexs-pm-system.php:262 ../dexs-pm-system.php:275
+#: ../dexs-pm-system.php:282 ../dexs-pm-system.php:294
+#: ../dexs-pm-system.php:307 ../frontend/frontend.php:42
+#: ../frontend/frontend.php:48 ../frontend/frontend.php:52
+#: ../frontend/themes/the_system/frontend.php:103
+#: ../frontend/themes/the_system/frontend.php:109
+#: ../frontend/themes/the_system/frontend_full.php:120
+#: ../frontend/themes/the_system/frontend_full.php:126
+#: ../frontend/themes/the_system/header.php:20
+#: ../frontend/themes/the_system/header.php:37
+#: ../frontend/themes/the_system/message.php:75
+#: ../frontend/themes/the_system/settings.php:9 ../include/pm_tables.php:69
+#: ../include/pm_tables.php:81 ../include/pm_tables.php:91
+#: ../include/pm_tables.php:99 ../include/pm_tables.php:201
+#: ../include/pm_tables.php:238 ../include/pm_tables.php:276
+#: ../include/pm_tables.php:578 ../include/pm_tables.php:772
+msgid "Trash"
+msgstr "Papierkorb"
+
+#: ../dexs-pm-system.php:263 ../dexs-pm-system.php:274
+#: ../dexs-pm-system.php:283 ../dexs-pm-system.php:295
+#: ../dexs-pm-system.php:306 ../frontend/frontend.php:41
+#: ../frontend/frontend.php:47 ../frontend/themes/the_system/frontend.php:102
+#: ../frontend/themes/the_system/frontend_full.php:119
+#: ../frontend/themes/the_system/header.php:15
+#: ../frontend/themes/the_system/header.php:34
+#: ../frontend/themes/the_system/message.php:74
+#: ../frontend/themes/the_system/settings.php:8 ../include/pm_tables.php:68
+#: ../include/pm_tables.php:80 ../include/pm_tables.php:89
+#: ../include/pm_tables.php:200 ../include/pm_tables.php:237
+#: ../include/pm_tables.php:577 ../include/pm_tables.php:771
+msgid "Archive"
+msgstr "Archiv"
+
+#: ../dexs-pm-system.php:264 ../dexs-pm-system.php:276
+#: ../dexs-pm-system.php:284 ../dexs-pm-system.php:296
+#: ../dexs-pm-system.php:308 ../frontend/themes/the_system/header.php:40
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: ../dexs-pm-system.php:270 ../dexs-pm-system.php:302
+#: ../frontend/themes/the_system/header.php:25
+msgid "Write a new PM"
+msgstr "Schreibe eine neue PN"
+
+#: ../dexs-pm-system.php:280
+msgid "Send"
+msgstr "Absenden"
+
+#: ../dexs-pm-system.php:323 ../frontend/frontend.php:102
+#: ../include/pm_system.php:149
+msgid "You have reached your maximum number of messages. Please delete some!"
+msgstr "Du hast die maximale Anzahl an PNs erreicht, bitte lösche einige!"
+
+#: ../dexs-pm-system.php:336 ../frontend/frontend.php:115
+msgid "PM successfully sent!"
+msgstr "PM wurde erfolgreich gesendet!"
+
+#: ../dexs-pm-system.php:342 ../frontend/frontend.php:121
+msgid "1 Action was carried out successfully!"
+msgstr "1 Aktion wurde erfolgreich durchgefüht!"
+
+#: ../dexs-pm-system.php:344 ../frontend/frontend.php:123
+msgid "Actions was carried out successfully!"
+msgstr "Aktionen wurde erfolgreich durchgefüht!"
+
+#: ../dexs-pm-system.php:350 ../frontend/frontend.php:129
+msgid "Your personal preferences have been saved!"
+msgstr "Deine persönlichen Einstellungen wurden gespeichert!"
+
+#: ../functions.php:149
+msgid "1 new Message"
+msgstr "1 neue Nachricht"
+
+#: ../functions.php:151
+msgid "new Messages"
+msgstr "neue Nachrichten"
+
+#: ../functions.php:165
+msgid "Write a new Message"
+msgstr "Schreibe eine neue PN"
+
+#: ../admin/pm_general.php:13 ../admin/pm_notification.php:14
+#: ../admin/pm_permissions.php:20
+msgid "Settings saved."
+msgstr "Einstellungen wurden gespeichert!"
+
+#: ../admin/pm_general.php:19
+msgid "Send Form"
+msgstr "Absende Formular"
+
+#: ../admin/pm_general.php:23
+msgid "Recipient listing"
+msgstr "Empfänger Auflistung"
+
+#: ../admin/pm_general.php:26
+msgid "DropDown Input Field"
+msgstr "Auswahlfeld (DropDown)"
+
+#: ../admin/pm_general.php:27
+msgid "AutoComplete Input Field"
+msgstr "AutoVervollständigung (Input)"
+
+#: ../admin/pm_general.php:36 ../frontend/themes/the_system/settings.php:33
+#: ../include/pm_tables.php:606
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: ../admin/pm_general.php:38 ../frontend/themes/the_system/settings.php:35
+#: ../include/pm_tables.php:608
+msgid "Deactivate"
+msgstr "Deaktivieren"
+
+#: ../admin/pm_general.php:44
+msgid "Backend"
+msgstr "Backend"
+
+#: ../admin/pm_general.php:48
+msgid "Backend Style"
+msgstr "Backend Stil"
+
+#: ../admin/pm_general.php:51
+msgid "One Page - Tab Style"
+msgstr "Eine Seite - Tab Stil"
+
+#: ../admin/pm_general.php:52
+msgid "One Page - Link Style"
+msgstr "Eine Seite - Link Stil"
+
+#: ../admin/pm_general.php:53
+msgid "Five Pages - Menu Style"
+msgstr "Fünf Seiten - Menu Stil"
+
+#: ../admin/pm_general.php:55
+msgid ""
+"\"Five-Pages - Menu Style\" is not available, when you Subordinate the Menu "
+"under \"Users\"."
+msgstr ""
+"Der \"Fünf Seiten - Menu Stil\" ist nicht verfügbar, wenn das Menü unter "
+"\"Benutzer\" untergeordnet wurde."
+
+#: ../admin/pm_general.php:60
+msgid "Show in Toolbar"
+msgstr "Zeige in Toolbar"
+
+#: ../admin/pm_general.php:63 ../admin/pm_general.php:83
+#: ../admin/pm_general.php:117 ../admin/pm_general.php:127
+msgid "Yes"
+msgstr "Ja"
+
+#: ../admin/pm_general.php:65 ../admin/pm_general.php:85
+#: ../admin/pm_general.php:119 ../admin/pm_general.php:129
+msgid "No"
+msgstr "Nein"
+
+#: ../admin/pm_general.php:70
+msgid "Show in Navigation"
+msgstr "Zeige in Navigation"
+
+#: ../admin/pm_general.php:73
+msgid "Extra menu entry"
+msgstr "Extra Menu Eintrag"
+
+#: ../admin/pm_general.php:75
+msgid "Subordinate under Users"
+msgstr "Unter Benutzer unterordnen"
+
+#: ../admin/pm_general.php:80 ../admin/pm_general.php:124
+msgid "Show Our Copyright"
+msgstr "Zeige unser Copyright"
+
+#: ../admin/pm_general.php:91
+msgid "Frontend"
+msgstr "Frontend"
+
+#: ../admin/pm_general.php:95
+msgid "Page Type"
+msgstr "Seiten Typ"
+
+#: ../admin/pm_general.php:98
+msgid "Normal Page with Sidebar"
+msgstr "Normale Seite mit Sidebar"
+
+#: ../admin/pm_general.php:99
+msgid "Fullwide Page without Sidebar"
+msgstr "Volle Seite ohne Sidebar"
+
+#: ../admin/pm_general.php:105
+msgid "PM Theme"
+msgstr "PN Design"
+
+#: ../admin/pm_general.php:114
+msgid "Show Template Copyright"
+msgstr "Zeige Design Copyright"
+
+#: ../admin/pm_general.php:141 ../admin/pm_notification.php:96
+#: ../admin/pm_permissions.php:145
+#: ../frontend/themes/the_system/settings.php:43 ../include/pm_tables.php:616
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: ../admin/pm_general.php:142 ../admin/pm_notification.php:97
+#: ../admin/pm_permissions.php:146
+msgid "Reset to Default"
+msgstr "Zurücksetzen"
+
+#: ../admin/pm_help.php:9
+msgid "So you can use our pm system also on the frontend!"
+msgstr "So kannst Du unser PN System auf dem Frontend nutzen!"
+
+#: ../admin/pm_help.php:11
+msgid "Create a new Page or, if you want or need it, create a new Post!"
+msgstr ""
+"Erstelle eine neue Seite, oder (sollte dies gewünscht/notwendig sein) "
+"erstelle eine neuen Beitrag!"
+
+#: ../admin/pm_help.php:12
+msgid "Enter any title, for example: Private Messages!"
+msgstr "Trage irgendeinen Titel ein, zum Beispiel: Private Nachrichten!"
+
+#: ../admin/pm_help.php:13
+msgid ""
+"Write no Text, but only the shortcode <code>[pm_system]</code>! <small>"
+"(Together with the symbols \"[\" and \"]\"!)</small>."
+msgstr ""
+"Füge dort keinen Text, sondern nur den Shortcode <code>[pm_system]</code> "
+"ein! <small>(Mitsamt den Symbolen \"[\" und \"]\")</small>"
+
+#: ../admin/pm_help.php:14
+msgid ""
+"Configure the access to the frontend, unter \"Settings\" > \"Dexs PM System"
+"\"."
+msgstr ""
+"Konfiguriere den Zugriff auf das Frontend System, unter \"Einstellungen\" > "
+"\"Dexs PM System\"."
+
+#: ../admin/pm_help.php:19
+msgid "Dexs PM System"
+msgstr "Dexs PM System"
+
+#: ../admin/pm_help.php:23
+msgid ""
+"<b>Autocomplete Input Field:</b> The Autocomplete Input field Style will "
+"integrate the \"Prototype Javascript Framework\" in the version: 1.6.0.2! If "
+"you have script problems with this framework, please use the Drop Down Input "
+"Field Style, this style will only include one self-written Javascript file "
+"and works completely without framework!"
+msgstr ""
+"<b>Auto Vervollständigung:</b> Der Auto Vervollständigungsstil nutzt die "
+"\"ProtoType Javascript Framework\" in der Version 1.6.0.2! Wenn Du Skript "
+"Probleme bei diesem Framework hast, so nutze bitte den DropDown Eingabe "
+"Stil, dieser arbeitet komplett auf einer selbstgeschriebenen Javascript "
+"Datei komplett ohne Framework!"
+
+#: ../admin/pm_help.php:24
+msgid ""
+"<b>eMail Notification:</b> A user, who receives a private message, can be "
+"informed by email about that!"
+msgstr ""
+"<b>eMail Benachrichtigung:</b> Ein Benutzer, der eine Private Nachricht "
+"erhält, kann darüber via eMail informiert werden!"
+
+#: ../admin/pm_help.php:25
+msgid ""
+"<b>Five Pages - Menu Style:</b> This backend style can only be used, if the "
+"message menu has his own entry and is not subordinate under \"Users\"!"
+msgstr ""
+"<b>Fünf Seiten - Menu Stil:</b> Dieser Stil kann nur dann verwendet werden, "
+"wenn das Nachrichten Menü nicht unter \"Benutzer\" untergeordnet wurde!"
+
+#: ../admin/pm_help.php:26
+msgid ""
+"<b>Fullwide Page</b> This option is only useful, if your design has a "
+"\"fullwide page\" support! (A Page withour sidebar!). If you activate this "
+"option, will be one more column and also more options visible on the front "
+"view of our pm system."
+msgstr ""
+"<b>Volle Seite</b> Diese Option ist nur dann verwendbar, wenn Dein Design "
+"eine \"Fullwide Page\" Unterstützung anbietet! Wenn Du diese Option "
+"aktivierst, werden die PN Tabellen im Frontend um eine Spalte und um einige "
+"Optionen erweitert!"
+
+#: ../admin/pm_help.php:30
+msgid "General Settings"
+msgstr "Allgemein"
+
+#: ../admin/pm_help.php:34
+msgid ""
+"<b>Permissions:</b> You can configure the permissions for the 5 given roles. "
+"Custom roles, about a plugin, will currently no support!"
+msgstr ""
+"<b>Berechtigungen:</b> Du kannst die Berechtigungen für die 5 vorgegebenen "
+"Rollen konfigurieren. Eigene Rollen, die über ein Plugin erstellt wurden, "
+"werden derzeit noch nicht unterstützt!"
+
+#: ../admin/pm_help.php:35
+msgid ""
+"<b>Exclude/Include Users:</b> You can exclude and include Users, regardless "
+"of their role."
+msgstr ""
+"<b>Nutzer ein/ausschließen:</b> Du kannst einzelne Nutzer, unabhängig ihrer "
+"Rolle, den Zugriff auf das PM System gestatten/verbieten!"
+
+#: ../admin/pm_help.php:39
+msgid "Permissions Settings"
+msgstr "Berechtigungen"
+
+#: ../admin/pm_help.php:43
+msgid ""
+"<b>General:</b> The information cannot be stored in the database, because of "
+"the character limitation of the wordpress options fields. Therefore will be "
+"all informations about the email notification stored in a file, called "
+"<code>mail.php</code>, in the Plugin directory!"
+msgstr ""
+"<b>Allgemein:</b> Die Informationen können nicht in der Datenbank, wegen der "
+"Zeichenlimitierung der WordPress Options Felder, gespeichert werden. Deshalb "
+"werden alle Informationen über die eMail Benachrichtigungen in der Datei  "
+"<code>mail.php</code>, innerhalb des Plugin Verzeichnisses, abgespeichert!"
+
+#: ../admin/pm_help.php:44
+msgid ""
+"<b>Sender Address:</b> The sender email address can be a not exist address! "
+"Like: example@your-website.net"
+msgstr ""
+"<b>Absender Adresse:</b> Diese Absende eMail Adresse muss nicht wirklich "
+"existieren! Beispiel: beispiel@deine-webseite.net"
+
+#: ../admin/pm_help.php:45
+msgid ""
+"<b>Reply-To Address:</b> The Reply-To address must be only set, if you want "
+"to receive answers from the Recipients of the email notification! You can "
+"also leave this field blank and set an exist email address in the \"sender "
+"address\" field, when you want to receive answers from the Recipients!"
+msgstr ""
+"<b>Antwort-An Adresse:</b> Die Antwort-An Adresse muss nur dann gesetzt "
+"werden, wenn der Empfänder der eMail Benachrichtung auf diese antworten "
+"können soll!"
+
+#: ../admin/pm_help.php:46
+msgid ""
+"<b>Send Test Mail:</b> Remember to configure and activate \"Mercury\", if "
+"you want to test the email notification on XAMPP!"
+msgstr ""
+"<b>Sende Test eMail:</b> Vergiss nicht \"Mercury\" zu aktivieren und zu "
+"konfigurieren, wenn Du eine Test Email innerhalb der XAMPP Umgebung absenden "
+"möchtest!"
+
+#: ../admin/pm_help.php:55
+msgid "For more information:"
+msgstr "Für weitere Informationen:"
+
+#: ../admin/pm_help.php:56
+msgid ""
+"<a href=\"http://wordpress.org/extend/plugins/dexs-pm-system/\" target="
+"\"_blank\">Plugin & Support</a>"
+msgstr ""
+"<a href=\"http://wordpress.org/extend/plugins/dexs-pm-system/\" target="
+"\"_blank\">Plugin & Support</a>"
+
+#: ../admin/pm_help.php:57
+msgid ""
+"<a href=\"http://sambrishes.net/wordpress/en/dexs-pm-system/\" target="
+"\"_blank\">The Plugin Webside</a>"
+msgstr ""
+"<a href=\"http://sambrishes.net/wordpress/dexs-pm-system/\" target=\"_blank"
+"\">Die Plugin Webseite</a>"
+
+#: ../admin/pm_notification.php:26
+msgid "eMail Notification Configruation"
+msgstr "eMail Benachrichtigungen"
+
+#: ../admin/pm_notification.php:27
+msgid ""
+"This Informations will be stored in the <code>mail.php</code> file, in the "
+"plugin directory."
+msgstr ""
+"Diese Informationen werden in der <code>mail.php</code> Datei, innerhalb des "
+"Plugin Verzeichnisses, abgespeichert."
+
+#: ../admin/pm_notification.php:31
+msgid "eMail Address (Sender)"
+msgstr "eMail Adresse (Absender)"
+
+#: ../admin/pm_notification.php:38
+msgid "eMail Address (Reply-To)"
+msgstr "eMail Adresse (Antwort-An)"
+
+#: ../admin/pm_notification.php:41
+msgid ""
+"Specify an exist(!) eMail address, when you want that the recipients can "
+"answer to a notification!"
+msgstr ""
+"Trage eine existierende eMail Adresse ein, wenn Du willst, dass die "
+"Empfänger auf die Benachrichtigungen antworten können!"
+
+#: ../admin/pm_notification.php:46
+msgid "eMail Subject"
+msgstr "eMail Betreff"
+
+#: ../admin/pm_notification.php:53
+msgid "eMail Message"
+msgstr "eMail Nachricht"
+
+#: ../admin/pm_notification.php:57
+msgid "Blog Shortcodes:"
+msgstr "Blog Kürzel:"
+
+#: ../admin/pm_notification.php:58
+msgid "Site Title"
+msgstr "Seitentitel"
+
+#: ../admin/pm_notification.php:58 ../admin/pm_notification.php:59
+#: ../admin/pm_notification.php:60
+msgid "Example:"
+msgstr "Beispiel:"
+
+#: ../admin/pm_notification.php:59
+msgid "Home Url"
+msgstr "Home URL"
+
+#: ../admin/pm_notification.php:60
+msgid "eMail Adress"
+msgstr "eMail Adresse"
+
+#: ../admin/pm_notification.php:61
+msgid "PM Shortcodes:"
+msgstr "PN Kürzel"
+
+#: ../admin/pm_notification.php:63
+msgid "PM Recipient Name"
+msgstr "PN Empfänger Name"
+
+#: ../admin/pm_notification.php:64
+msgid "PM Sender Name"
+msgstr "PN Absender Name"
+
+#: ../admin/pm_notification.php:66
+msgid "PM Subject"
+msgstr "PN Betreff"
+
+#: ../admin/pm_notification.php:67
+msgid "PM Text (Full)"
+msgstr "PN Text (Vollständig)"
+
+#: ../admin/pm_notification.php:69
+msgid "Number"
+msgstr "Anzahl"
+
+#: ../admin/pm_notification.php:69
+msgid "PM Text Excerpt: Replace <b>Number</b> with any number of letters!"
+msgstr ""
+"PN Text Auszug (Ersetze \"<code>Anzahl</code>\" mit der Anzahl der "
+"wiederzugebenden Zeichen"
+
+#: ../admin/pm_notification.php:71
+msgid "PM Send Date"
+msgstr "PN Absendedatum"
+
+#: ../admin/pm_notification.php:72
+msgid "M Send Time"
+msgstr "PN Absendezeit"
+
+#: ../admin/pm_notification.php:74
+msgid "Link to the PM (Frontend View)"
+msgstr "Link zur PN (Frontend)"
+
+#: ../admin/pm_notification.php:75
+msgid "Link to the PM (Backend View)"
+msgstr "Link zur PN (Backend)"
+
+#: ../admin/pm_notification.php:87
+msgid "Send a Test eMail to:"
+msgstr "Sende eine Test Nachricht an:"
+
+#: ../admin/pm_notification.php:91
+msgid "Send Now"
+msgstr "Absenden"
+
+#: ../admin/pm_permissions.php:26
+msgid "Role Permissions Settings"
+msgstr "Zugriffsrechte Einstellungen für die Rollen"
+
+#: ../admin/pm_permissions.php:31 ../admin/pm_permissions.php:42
+msgid "Subscriber"
+msgstr "Abonnenten"
+
+#: ../admin/pm_permissions.php:32 ../admin/pm_permissions.php:43
+msgid "Contributor"
+msgstr "Mitarbeiter"
+
+#: ../admin/pm_permissions.php:33 ../admin/pm_permissions.php:44
+msgid "Author"
+msgstr "Autoren"
+
+#: ../admin/pm_permissions.php:34 ../admin/pm_permissions.php:45
+msgid "Editor"
+msgstr "Redakteure"
+
+#: ../admin/pm_permissions.php:35 ../admin/pm_permissions.php:46
+msgid "Administrator"
+msgstr "Administratoren"
+
+#: ../admin/pm_permissions.php:52
+msgid "Deactivate PM System"
+msgstr "PN System deaktivieren"
+
+#: ../admin/pm_permissions.php:61
+msgid "Max. Number of PMs"
+msgstr "Max. Anzahl an PNs"
+
+#: ../admin/pm_permissions.php:70
+msgid "Enable Images in PMs"
+msgstr "Erlaube Bilder in PNs"
+
+#: ../admin/pm_permissions.php:79
+msgid "Enable PM System on Backend"
+msgstr "Zeige das PN System im Backend"
+
+#: ../admin/pm_permissions.php:88
+msgid "Enable PM System on Frontend"
+msgstr "Zeige das PN System im Frontend"
+
+#: ../admin/pm_permissions.php:97
+msgid "Default"
+msgstr "Standard"
+
+#: ../admin/pm_permissions.php:97
+msgid "Enable eMail Notification"
+msgstr "eMail Benachrichtigungen"
+
+#: ../admin/pm_permissions.php:107
+msgid "<b>Number of PMs - Note:</b>"
+msgstr "<b>Anzahl der PNs - Notiz</b>"
+
+#: ../admin/pm_permissions.php:108
+msgid ""
+"Unlimited: All users of this role can unlimited write and send private "
+"messages!"
+msgstr ""
+"Unlimitiert: Alle Nutzer dieser Rolle können unbegrenzt Nachrichten "
+"schreiben und senden!"
+
+#: ../admin/pm_permissions.php:109
+msgid ""
+"Nothing: All users of this role cannot even write and send one private "
+"message!"
+msgstr ""
+"Nichts: Alle Nutzer dieser Rolle können keine einzige Nachricht schreiben "
+"oder senden!"
+
+#: ../admin/pm_permissions.php:113
+msgid "Individual User Settings"
+msgstr "Benutzerdefinierte Einstellungen"
+
+#: ../admin/pm_permissions.php:117
+msgid "Exclude Users by ID"
+msgstr "Nutzer ausschließen (nach ID)"
+
+#: ../admin/pm_permissions.php:120 ../admin/pm_permissions.php:128
+msgid "Separate the user ids with a comma!"
+msgstr "Trenne die einzelnen Benutzer IDs mit einem Komma!"
+
+#: ../admin/pm_permissions.php:125
+msgid "Include Users by ID"
+msgstr "Nutzer einschließen (nach ID)"
+
+#: ../admin/pm_settings.php:183
+msgid "You must enter a eMail address!"
+msgstr "Du musst eine eMail Adresse angeben!"
+
+#: ../admin/pm_settings.php:195
+msgid "You must enter a eMail subject!"
+msgstr "Du musst einen Betreff angeben!"
+
+#: ../admin/pm_settings.php:201
+msgid "You must enter a eMail Message!"
+msgstr "Du musst eine eMail NAchricht angeben!"
+
+#: ../frontend/frontend.php:43 ../include/pm_tables.php:70
+#: ../include/pm_tables.php:196
+msgid "Mark as Read"
+msgstr "Als gelesen markieren"
+
+#: ../frontend/frontend.php:44 ../include/pm_tables.php:71
+#: ../include/pm_tables.php:198
+msgid "Mark as Unread"
+msgstr "Als ungelesen markieren"
+
+#: ../frontend/frontend.php:51 ../frontend/themes/the_system/frontend.php:108
+#: ../frontend/themes/the_system/frontend_full.php:125
+#: ../include/pm_tables.php:90 ../include/pm_tables.php:275
+msgid "Move Back"
+msgstr "Zurück Verschieben"
+
+#: ../frontend/frontend.php:55 ../frontend/themes/the_system/frontend.php:105
+#: ../frontend/themes/the_system/frontend_full.php:122
+#: ../frontend/themes/the_system/message.php:76 ../include/pm_tables.php:100
+#: ../include/pm_tables.php:312 ../include/pm_tables.php:773
+msgid "Restore"
+msgstr "Wiederherstellen"
+
+#: ../frontend/frontend.php:56 ../frontend/themes/the_system/message.php:77
+#: ../include/pm_tables.php:101 ../include/pm_tables.php:313
+#: ../include/pm_tables.php:774
+msgid "Delete Permanently"
+msgstr "Entfernen"
+
+#: ../frontend/frontend.php:220 ../frontend/frontend.php:226
+msgid "You can't access to this area!"
+msgstr "Du kannst auf diesen Bereich nicht zugreifen!"
+
+#: ../frontend/themes/the_system/frontend.php:24
+#: ../frontend/themes/the_system/frontend_full.php:24
+#: ../include/pm_tables.php:115 ../include/pm_tables.php:347
+msgid "Bulk Actions"
+msgstr "Aktion wählen"
+
+#: ../frontend/themes/the_system/frontend.php:27
+#: ../frontend/themes/the_system/frontend_full.php:27
+#: ../include/pm_tables.php:118 ../include/pm_tables.php:350
+msgid "Apply"
+msgstr "OK"
+
+#: ../frontend/themes/the_system/frontend.php:46
+#: ../frontend/themes/the_system/frontend_full.php:53
+#: ../frontend/themes/the_system/send_form.php:21
+msgid "Subject"
+msgstr "Betreff"
+
+#: ../frontend/themes/the_system/frontend.php:47
+#: ../frontend/themes/the_system/frontend_full.php:55
+#: ../include/pm_tables.php:76 ../include/pm_tables.php:86
+#: ../include/pm_tables.php:96 ../include/pm_tables.php:106
+msgid "Date"
+msgstr "Datum"
+
+#: ../frontend/themes/the_system/frontend.php:65
+#: ../frontend/themes/the_system/frontend.php:81
+#: ../frontend/themes/the_system/frontend_full.php:73
+#: ../frontend/themes/the_system/frontend_full.php:89
+#: ../frontend/themes/the_system/header.php:11
+#: ../frontend/themes/the_system/message.php:35
+#: ../frontend/themes/the_system/send_form.php:24 ../include/pm_tables.php:451
+#: ../include/pm_tables.php:707
+msgid "Recipients"
+msgstr "Empfänger"
+
+#: ../frontend/themes/the_system/frontend.php:106
+#: ../frontend/themes/the_system/frontend_full.php:123
+msgid "Delete"
+msgstr "Entfernen"
+
+#: ../frontend/themes/the_system/frontend.php:122
+#: ../frontend/themes/the_system/frontend_full.php:139
+#: ../include/pm_tables.php:330
+msgid "You have no messages in your"
+msgstr "Du hast keine Nachrichten in Deinem"
+
+#: ../frontend/themes/the_system/frontend_full.php:32
+#: ../include/pm_tables.php:123
+msgid "One Message"
+msgstr "Eine Nachricht"
+
+#: ../frontend/themes/the_system/frontend_full.php:34
+#: ../include/pm_tables.php:125
+msgid "Messages"
+msgstr "Nachrichten"
+
+#: ../frontend/themes/the_system/frontend_full.php:54
+#: ../include/pm_tables.php:75 ../include/pm_tables.php:85
+#: ../include/pm_tables.php:95 ../include/pm_tables.php:105
+msgid "Excerpt"
+msgstr "Auszug"
+
+#: ../frontend/themes/the_system/frontend_full.php:110
+#: ../frontend/themes/the_system/message.php:83 ../include/pm_tables.php:188
+#: ../include/pm_tables.php:765
+msgid "Answer"
+msgstr "Antworten"
+
+#: ../frontend/themes/the_system/frontend_full.php:112
+#: ../frontend/themes/the_system/message.php:86 ../include/pm_tables.php:189
+#: ../include/pm_tables.php:231 ../include/pm_tables.php:269
+#: ../include/pm_tables.php:768
+msgid "Forward"
+msgstr "Weiterleiten"
+
+#: ../frontend/themes/the_system/header.php:6
+#: ../frontend/themes/the_system/message.php:16 ../include/pm_tables.php:73
+msgid "Sender"
+msgstr "Absender"
+
+#: ../frontend/themes/the_system/header.php:16
+#: ../frontend/themes/the_system/header.php:21 ../include/pm_tables.php:93
+#: ../include/pm_tables.php:103
+msgid "Users"
+msgstr "Nutzer"
+
+#: ../frontend/themes/the_system/header.php:28
+msgid "Go to Inbox"
+msgstr "Gehe zum Posteingang"
+
+#: ../frontend/themes/the_system/header.php:31
+msgid "Go to Outbox"
+msgstr "Gehe zum Postausgang"
+
+#: ../frontend/themes/the_system/header.php:34
+msgid "Go to Archive"
+msgstr "Gehe zum Archive"
+
+#: ../frontend/themes/the_system/header.php:37
+msgid "Go to Trash"
+msgstr "Gehe zum Papierkorb"
+
+#: ../frontend/themes/the_system/message.php:25
+#: ../frontend/themes/the_system/message.php:51 ../include/pm_tables.php:689
+#: ../include/pm_tables.php:727
+msgid "You"
+msgstr "Du"
+
+#: ../frontend/themes/the_system/message.php:28
+#: ../frontend/themes/the_system/message.php:54 ../include/pm_tables.php:169
+#: ../include/pm_tables.php:692 ../include/pm_tables.php:730
+msgid "Write a PM"
+msgstr "Schreibe eine PN"
+
+#: ../frontend/themes/the_system/message.php:67 ../include/pm_tables.php:743
+msgid "Write to all selected users"
+msgstr "Schreibe allen makierten Butzern"
+
+#: ../frontend/themes/the_system/message.php:85 ../include/pm_tables.php:767
+msgid "Answer to all selected users"
+msgstr "Antworte allen makierten Nutzern"
+
+#: ../frontend/themes/the_system/send_form.php:30 ../include/pm_tables.php:457
+msgid "Type here the names of each recipients."
+msgstr "Tippe hier die Namen der Empfänger ein."
+
+#: ../frontend/themes/the_system/send_form.php:45 ../include/pm_tables.php:470
+msgid "Select a Recipient"
+msgstr "Wähle einen Empfänger"
+
+#: ../frontend/themes/the_system/send_form.php:77 ../include/pm_tables.php:355
+#: ../include/pm_tables.php:505 ../include/pm_tables.php:754
+msgid "Priority"
+msgstr "Priorität"
+
+#: ../frontend/themes/the_system/send_form.php:79 ../include/pm_tables.php:356
+#: ../include/pm_tables.php:507
+msgid "Normal"
+msgstr "Normal"
+
+#: ../frontend/themes/the_system/send_form.php:80 ../include/pm_tables.php:357
+#: ../include/pm_tables.php:508
+msgid "Medium"
+msgstr "Mittel"
+
+#: ../frontend/themes/the_system/send_form.php:81 ../include/pm_tables.php:358
+#: ../include/pm_tables.php:509
+msgid "High"
+msgstr "Hoch"
+
+#: ../frontend/themes/the_system/send_form.php:82 ../include/pm_tables.php:359
+#: ../include/pm_tables.php:510 ../include/pm_tables.php:654
+msgid "Very High"
+msgstr "Sehr Hoch"
+
+#: ../frontend/themes/the_system/send_form.php:85 ../include/pm_tables.php:514
+msgid "Message"
+msgstr "Nachricht"
+
+#: ../frontend/themes/the_system/send_form.php:95 ../include/pm_tables.php:527
+msgid "Reset"
+msgstr "Reset"
+
+#: ../frontend/themes/the_system/settings.php:4 ../include/pm_tables.php:569
+msgid "Messages per Side"
+msgstr "Nachrichten pro Seite"
+
+#: ../include/pm_system.php:46
+msgid "Invalid Action!"
+msgstr "Ungültige Aktion"
+
+#: ../include/pm_system.php:69 ../include/pm_system.php:304
+#: ../include/pm_system.php:405
+msgid "You are neither the sender nor the recipient of this Message!"
+msgstr "Du bist weder der Absender noch der Empfänger dieser PN!"
+
+#: ../include/pm_system.php:82 ../include/pm_system.php:301
+#: ../include/pm_system.php:307 ../include/pm_system.php:409
+msgid "This message doesn't exist (anymore)!"
+msgstr "Diese Nachricht exisitiert nicht (mehr)!"
+
+#: ../include/pm_system.php:152
+msgid "Please enter a subject!"
+msgstr "Bitte gib einen Betreff an!"
+
+#: ../include/pm_system.php:155
+msgid "Please enter a message!"
+msgstr "Bitte schreib eine Nachricht!"
+
+#: ../include/pm_system.php:158
+msgid "Please enter minimum one recipient!"
+msgstr "Bitte gib mind. 1 Empfänger an!"
+
+#: ../include/pm_system.php:402
+msgid "Original Message"
+msgstr "Originale Nachricht"
+
+#: ../include/pm_system.php:402
+msgid "wrote on"
+msgstr "geschrieben am"
+
+#: ../include/pm_system.php:402
+msgid "at"
+msgstr "um"
+
+#: ../include/pm_system.php:402
+msgid "o'clock"
+msgstr "Uhr"
+
+#: ../include/pm_tables.php:74 ../include/pm_tables.php:84
+#: ../include/pm_tables.php:94 ../include/pm_tables.php:104
+msgid "Subject Title"
+msgstr "Betreff"
+
+#: ../include/pm_tables.php:83
+msgid "Recipient(s)"
+msgstr "Empfänger"
+
+#: ../include/pm_tables.php:185 ../include/pm_tables.php:230
+#: ../include/pm_tables.php:268 ../include/pm_tables.php:306
+msgid "Read"
+msgstr "Lesen"
+
+#: ../include/pm_tables.php:327
+msgid "No messages found!"
+msgstr "Keine Nachrichten gefunden!"
+
+#: ../include/pm_tables.php:355 ../include/pm_tables.php:361
+#: ../include/pm_tables.php:364
+msgid "Legend"
+msgstr "Legende"
+
+#: ../include/pm_tables.php:362
+msgid "Has read the message"
+msgstr "Hat die Nachricht gelesen"
+
+#: ../include/pm_tables.php:362
+msgid "Has <b>NOT</b> read the message"
+msgstr "Hat die Nachricht NICHT gelesen"
+
+#: ../include/pm_tables.php:365 ../include/pm_tables.php:680
+msgid "The Sender"
+msgstr "Der Absender"
+
+#: ../include/pm_tables.php:365 ../include/pm_tables.php:711
+msgid "The Recipient(s)"
+msgstr "Die Empfänger"
+
+#: ../include/pm_tables.php:442
+msgid "Enter Subject here"
+msgstr "Betreff"
+
+#: ../include/pm_tables.php:650
+msgid "Middle"
+msgstr "Mittel"
+
+#: ../include/pm_tables.php:652
+msgid "<b>High</b>"
+msgstr "<b>Hoch</b>"
+
+#: ../include/pm_tables.php:656
+msgid "<i>Normal</i>"
+msgstr "<i>Normal</i>"
+
+#: ../include/pm_tables.php:705
+msgid "1 Recipient"
+msgstr "1 Empfänger"
+
+#: ../include/pm_tables.php:757
+msgid "The Message"
+msgstr "Die Nachricht"
+
+#~ msgid "Du"
+#~ msgstr "Du"
+
+#~ msgid "Write a pm to all selected users"
+#~ msgstr "Schreibe eine PN an alle makierten Nutzer"
+
+#~ msgid "Write to all recipients"
+#~ msgstr "Schreibe eine PN an alle Empfänger"
+
+#~ msgid "Options:"
+#~ msgstr "Optionen:"
+
+#~ msgid "Read this PM"
+#~ msgstr "Diese PN Lesen"
+
+#~ msgid "You have no messages in your outbox!"
+#~ msgstr "Du hast keine Nachrichten in Deinem Postausgang!"
+
+#~ msgid "Write this user a PM"
+#~ msgstr "Schreibe diesen Nutzer eine PN"
+
+#~ msgid "You have no messages in your archive!"
+#~ msgstr "Du hast keine Nachrichten in Deinem Archiv!"
+
+#~ msgid "You have no messages in your trash!"
+#~ msgstr "Du hast keine Nachrichten in Deinem Papierkorb!"
+
+#~ msgid "You have no messages in your inbox!"
+#~ msgstr "Due hast keine Nachrichten in Deinem Posteingang!"
+
+#~ msgid "You are the Sender"
+#~ msgstr "Du bist der Absender"
+
+#~ msgid "Recipient"
+#~ msgstr "Empfänger"
+
+#~ msgid "Write to all selected Users"
+#~ msgstr "Schreibe allen makierten Nutzern"
+
+#~ msgid "Write to All"
+#~ msgstr "Schreibe allen"
+
+#~ msgid "Write to all Recipients"
+#~ msgstr "Schreibe allen Empfängern"
+
+#~ msgid "Answer to All"
+#~ msgstr "Allen antworten"
+
+#~ msgid "Answer to Sender"
+#~ msgstr "Absender antworten"
+
+#~ msgid "Answer to all Recipients"
+#~ msgstr "Antworten allen Empfängern"
+
+#~ msgid "Go"
+#~ msgstr "Los"
+
+#~ msgid "Error: You are neither the sender nor the recipient of this PM!"
+#~ msgstr "Fehler: Du bist weder der Absender noch der Empfänger dieser PN"
+
+#~ msgid "Error: This message doesn't exist (anymore)!"
+#~ msgstr "Fehler: Diese Nachricht exisitiert nicht (mehr)!"
+
+#~ msgid "%d Messages"
+#~ msgstr "%d Nachrichten"
+
+#~ msgid "$s Messages"
+#~ msgstr "%d Nachrichten"
+
+#~ msgid "Test Recipient"
+#~ msgstr "Test Empfänger"
+
+#~ msgid "Test Sender"
+#~ msgstr "Test Absender"
+
+#~ msgid "Lorem Ipsum Test PM"
+#~ msgstr "Lorem Ipsum Test Nachricht"
+
+#~ msgid "Recipient Display"
+#~ msgstr "Empfänger Ansicht"
+
+#~ msgid "FaceBook Input Style"
+#~ msgstr "FaceBook Eingabe Stil"
+
+#~ msgid "Tab Style (Like Themes)"
+#~ msgstr "Tab Stil (Wie bei Design)"
+
+#~ msgid "Link Style (Like Posts)"
+#~ msgstr "Link Stil (Wie bei Beiträge)"
+
+#~ msgid ""
+#~ "This option is dependent on the template. Small Style with Sidebar, Large "
+#~ "Style without Sidebar!"
+#~ msgstr ""
+#~ "Diese Option ist Template anhängig. Small Stil mit Sidebar, Large Stil "
+#~ "ohne Sidebar!"
+
+#~ msgid "Change the Frontend View."
+#~ msgstr "Ändere die Ansicht im Frontend."
+
+#~ msgid "Frontend Template"
+#~ msgstr "Frontend Design"
+
+#~ msgid "Enable the eMail Notification for new PMs!"
+#~ msgstr "Aktiviere die eMail Benachrichtung bei neuen PNs!"
+
+#~ msgid "Disable"
+#~ msgstr "Deaktivieren"
+
+#~ msgid "Enable"
+#~ msgstr "Aktivieren"
+
+#~ msgid "Actions"
+#~ msgstr "Aktionen"
+
+#~ msgid "(i.e.: <code>3,14,15,9,26</code>)"
+#~ msgstr "(z.B.: <code>3,14,15,9,26</code>)"
+
+#~ msgid "-1 = Unlimited || 0 = PM System deactivated"
+#~ msgstr "-1 = Unlimitiert || 0 = Deaktiviert"
+
+#~ msgid "Set the default of the eMail Notification! Check = Activate"
+#~ msgstr ""
+#~ "Setze den Standard bei der eMail Benachrichtigung! Häckchen = Aktiviert"
+
+#~ msgid "Activate eMail Notification"
+#~ msgstr "Aktiviere eMail Benachrichtigungen"
+
+#~ msgid "eMail Notification Sender eMail"
+#~ msgstr "Absender Adresse der eMail"
+
+#~ msgid "i.e.:"
+#~ msgstr "z.B.:"
+
+#~ msgid "eMail Notification Subject"
+#~ msgstr "Betreff der eMail"
+
+#~ msgid "eMail Notification Message"
+#~ msgstr "Nachricht der eMail"
+
+#~ msgid "To:"
+#~ msgstr "An:"
+
+#~ msgid "Answer to Recipients"
+#~ msgstr "Empfänger antworten"
+
+#~ msgid "Error: You are not the recipient of this message!"
+#~ msgstr "Fehler: Du bist nicht der Empfänger dieser Nachricht!"
+
+#~ msgid "Error: You have deleted this message already!"
+#~ msgstr "Fehler: Diese PN wurde bereits gelöscht!"
+
+#~ msgid "Priority: Normal"
+#~ msgstr "Priorität: Normal"
+
+#~ msgid "Priority: Middle"
+#~ msgstr "Priorität: Mittel"
+
+#~ msgid "Priority: High"
+#~ msgstr "Priorität: Hoch"
+
+#~ msgid "Priority: Very High"
+#~ msgstr "Priorität: Sehr Hoch"
+
+#~ msgid "Receive an email when someone sends you a PM!"
+#~ msgstr "Erhalte eine eMail, wenn Dir jemand eine PN schickt!"
+
+#~ msgid "Write to Sender"
+#~ msgstr "Schreibe dem Sender"

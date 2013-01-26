@@ -13,7 +13,7 @@ A Private Messages System for your WordPress Community!
 == Description ==
 A Private Messages System for your WordPress Community!
 
-<a href="http://www.sambrishes.net/wordpress/en/plugin/pm-system/" title="Plugin Page">Plugin Page (Enlgish)</a> | <a href="http://www.sambrishes.net/wordpress/plugin/pm-system/" title="Plugin Page">Plugin Seite (Deutsch)</a>
+<a href="http://www.sambrishes.net/wordpress/en/plugin/pm-system/" title="Plugin Page">Plugin Page (English)</a> | <a href="http://www.sambrishes.net/wordpress/plugin/pm-system/" title="Plugin Page">Plugin Seite (Deutsch)</a>
 
 <strong>Attention! This plugin is currently in a beta phase, please report some bugs! Thanks for your help!</strong>
 
@@ -57,13 +57,13 @@ But that's not all what our plugin can do, download and test it and send us your
 n/a
 
 == Screenshots ==
-1. PM System (0.9.0): Admin Interface
-2. PM System (0.9.0): BackEnd Menu Order Options
-3. PM System (0.9.0): Standard Frontend Style
+1. PM System (0.9.0) Admin Interface
+2. PM System (0.9.0) BackEnd Menu Order Options
+3. PM System (0.9.0) Standard Frontend Style
 
 == Changelog ==
 = 0.9.1 BETA =
-* Fix: Faulty Path to the Stylesheets and to the JS-Scripts on the Frontend!
+* Fix: Faulty Path to the Stylesheets and to the JS-Scripts on the Front End!
 
 = 0.9.0 BETA =
 ATTENTION: First Beta Version!

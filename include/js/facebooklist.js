@@ -65,7 +65,6 @@ bug fix: improved browser compatibility (Safari, IE)
 
 /* Copyright: InteRiders <http://interiders.com/> - Distributed under MIT - Keep this message! */
 
-
 // Added key contstant for COMMA watching happiness
 Object.extend(Event, { KEY_COMMA: 188, KEY_SPACE: 32 });
 

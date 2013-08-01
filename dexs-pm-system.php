@@ -1,367 +1,553 @@
 <?php
 /*
-Plugin Name: Dexs PM System
-Plugin URI: http://www.sambrishes.net/wordpress/plugin/pm-system/
-Description: Attention: <a title='This plugin is currently in the Beta Phase!'>BETA</a>, please report Bugs! A Private Messages System for your WordPress Community. Use it on the Back-End and also on the Front-End!
-A Private Messages System for your WordPress Community. The access is possible from frontend and also from backend. Need Help? Go to the "Dexs PM System" Settings, under Settings, and click on the "Help" menu above the side!
-Author: SamBrishesWeb
-Version: 0.9.1 BETA
-Author URI: http://www.sambrishes.net/wordpress
-Copyright: 2012-2013, SamBrishesWeb WordPress
-*/
+ Plugin Name: Dexs PM System
+ Plugin URI: http://wordpress.org/plugins/dexs-pm-system/
+ Description: A private messages system for your WordPress Community. Finally a new update, after about 6 months. Sorry and thanks for 2 x 5 stars on WordPress.org! <3 ^.^ (Codename: PreHexley)
+ Author: SamBrishes (PYTES.NET)
+ Author URI: http://www.pytes.net
+ Version: 1.0.0 RC.1
+ Version CodeName: PreHexley
+ Copyright: 2012-2013, SamBrishes (PYTES.NET)
+ */
 
-/***************************
-*	PLUGIN SETTINGS
-***************************/
-function dexs_pm_system_lang() {
-	load_plugin_textdomain( 'dexs-pm', false, dirname(plugin_basename(__FILE__)) . '/language/' );
-}
-add_action('plugins_loaded', 'dexs_pm_system_lang');
-
-define("D_URL", get_bloginfo('wpurl')."/wp-content/plugins/".dirname(plugin_basename(__FILE__)));
-define("ADMIN_A_URL", "../wp-content/plugins/".dirname(plugin_basename(__FILE__)));
-define("A_URL", "wp-content/plugins/".dirname(plugin_basename(__FILE__)));
-define("VERSION", "0.9.0 BETA");
-
-# *role* == Deactivate,NumOfPMS,Images,ShowBackend,ShowFrontend,Default
-$default = array(
-	'recipient_listing' 	=> '1',
-	'email_notice' 			=> '0',
-	'backend_style' 		=> '1',
-	'showin_toolbar'		=> '1',
-	'showin_navigation' 	=> '1',
-	'backend_copyright' 	=> '1',
-	'frontend_style' 		=> '0',
-	'frontend_theme' 		=> 'the_system',
-	'frontend_tcopy' 		=> '1',
-	'frontend_copy' 		=> '1'
-);
-$default_permissions = array(
-	'administrator' 		=> '0,-1,1,1,1,0',
-	'editor' 				=> '0,-1,0,1,1,0',
-	'author' 				=> '0,100,0,1,1,0',
-	'contributor' 			=> '0,50,0,1,1,0',
-	'subscriber' 			=> '0,10,0,1,1,0',
-	'exclude_users' 		=> '',
-	'include_users' 		=> ''
-);
-
-
-/***************************
-*	CREATE PM SYSTEM
-***************************/
-function dexs_pm_system_install(){
-	global $wpdb;
+	define("DPM_S_VER", "1.0.0 RC.1");
+	define("DPM_FOLDER", plugin_dir_path(__FILE__));
 	
-	$table_name = $wpdb->prefix."dexs_pms";
+	/*
+	 *	INCLUDE THE CLASSES, THE FUNCTIONS AND THE LANGUAGES
+	 */
+	function dexs_pms_language(){
+		load_plugin_textdomain('dexs-pm', false, dirname(plugin_basename(__FILE__)) . '/include/lang/');
+	}
+	add_action('plugins_loaded', 'dexs_pms_language');
 	
-	# pm_status == user_id=>{0=>UNREAD || 1=>READ || 2=>TRASH || 3=>REMOVE || 4=>ARCHIVE};
-	$sql = "CREATE TABLE IF NOT EXISTS $table_name(
-		pm_id INT(255) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-		pm_subject VARCHAR(120) NOT NULL,
-		pm_message TEXT NOT NULL,
-		pm_priority VARCHAR(1) NOT NULL DEFAULT '0',
-		pm_sender_id INT(255) NOT NULL,
-		pm_recipient_ids TEXT NOT NULL,
-		pm_status TEXT NOT NULL,
-		pm_signature VARCHAR(1) NOT NULL DEFAULT '0',
-		pm_send DATETIME NOT NULL
-	);";
-
-   require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-   dbDelta($sql);
-   
-	$sender = "notice@".preg_replace("#http://www.(.*)/(.*)#", "$1", get_bloginfo("wpurl"));
-	$reply_to = "notice@".preg_replace("#http://www.(.*)/(.*)#", "$1", get_bloginfo("wpurl"));
-	$subject = __('New PM on', 'dexs-pm')." ".get_bloginfo("name");
-$message = "<font style='font-size:14px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;'>".__('Welcome!
+	include("include/class.dexs_pmsystem.php");			# PM SETTINGS CLASS / FUNCTIONS
+	include("include/class.dexs_actions.php");			# PM SYSTEM CLASS / FUNCTIONS
+	include("include/class.dexs_template.php");			# PM TEMPLATE CLASS / FUNCTIONS
+		
+	$dexsPM = new dexsPMSystem();
+	$dexsPMA = new dexsPMActions();
+	$dexsPMT = new dexsPMTemplate();
 	
-A new message found his way to your inbox on our Website (<a href=\'%HOME_URL%\'>%HOME_URL%</a>). This private message comes from <b>%SEND_NAME%</b> on %PM_DATE% at %PM_TIME% o\'clock!
+	include("include/admin.widget.php");				# PM WIDGET
+	include("include/upgrade.batch10s.php");			# UPGRADE && DEPRECATED FUNCTIONS
 
-<b>PM Subject:</b> %PM_SUB%
-<b>PM Excerpt:</b>
-%PM_EXC_120%...
-
-<a href=\'%PM_F_LINK%\'>Go to your Inbox and answer!</a>
-
-You can deactivate this automatically System in your PM Settings on our Website!
-
-Yours Sincerely,
-%HOME_TIL%', 'dexs-pm')."</font>
-<hr style='border: 0;border-top:1px solid #888;'><font style='color:#888;font-style:italic;'>".__('This email is automatically generated. Please do not reply!', 'dexs-pm')."</font>";
+	
+	/*
+	 * 	INSTALL PM SYSTEM
+	 */
+	function dexs_pms_install(){
+		global $wpdb;
+		
+		if(!get_option("dexs_pm_system")){
+			/* ISNTALLATION */
+			add_option("dexs_pm_system", DPM_S_VER, "", "no");
 				
-$content = '<?php
-/* MAIL INFORMATIONS */
-$email_sender = "'.$sender.'";
-$email_reply_to = "'.$reply_to.'";
-$email_subject = "'.$subject.'";
+			$sql = "CREATE TABLE IF NOT EXISTS ".$wpdb->prefix."dexs_pmsystem(
+				pm_id BIGINT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+				pm_subject VARCHAR(150) NOT NULL,
+				pm_message TEXT NOT NULL,
+				pm_sender BIGINT(20) NOT NULL,
+				pm_recipients TEXT NOT NULL,				
+				pm_meta TEXT NOT NULL,
+				pm_send TIMESTAMP NOT NULL				
+			);";
 
-$email_message = "'.$message.'";
-?>';
-
-	file_put_contents(ADMIN_A_URL."/mail.php", $content); 
-}
-register_activation_hook(__FILE__, 'dexs_pm_system_install');
-
-
-/***************************
-*	DELETE PM SYSTEM
-***************************/
-function dexs_pm_system_uninstall() {
-    global $wpdb;
-	
-	# Delete Table
-	$table_name = $wpdb->prefix."dexs_pms";
-	$wpdb->query("DROP TABLE $table_name");
-	
-	# Delete Options
-	delete_option('dexs_pm_system'); 
-	delete_option('dexs_pm_permissions'); 
-	
-	# Delete user-generated datas (i.a. User Settings, ...)
-	$metausers = get_users('meta_key=dexs_pm_settings');
-    foreach ($metausers as $user) {
-       delete_user_meta(  $user->ID, 'dexs_pm_settings' );
-    }
-	
-}
-#register_deactivation_hook(__FILE__, 'dexs_pm_system_uninstall');
-register_uninstall_hook(__FILE__, 'dexs_pm_system_uninstall');
-
-
-/***************************
-	INCLUDE FUNCTIONS
-***************************/
-include("functions.php");
-
-
-/***************************
-	ADMIN MENUS
-***************************/
-add_shortcode('pm_system', 'pm_frontend_shortcode');
-
-/* Administration Menu */
-add_action('admin_menu', 'dexs_pm_admin');
-function dexs_pm_admin(){
-    global $help_config;
-    $help_config = add_submenu_page( 'options-general.php', "Dexs PM System", "Dexs PM System", 'manage_options', 'pm_config', 'pm_config');
-
-    add_action('load-'.$help_config, 'help_config_tab');
-}
-
-/* PM System Menu */
-add_action('admin_menu', 'dexs_pm_backend');
-function dexs_pm_backend() {
-	global $current_user, $default;
-	$option = get_option('dexs_pm_system', $default);
-	
-	if(check_permission($current_user->ID, "backend") == true){
-		
-		if($option['showin_navigation'] == 1){
-			if($option['backend_style'] == 0 || $option['backend_style'] == 1){		# One Page
-				add_menu_page(__('Private Messages', 'dexs-pm'), __('Private Messages', 'dexs-pm'), 'read', 'pm', 'user_pm', plugins_url('images/thisicon.png' , __FILE__));
-			} elseif($option['backend_style'] == 2){								# Five Pages
-				add_menu_page(__('Private Messages', 'dexs-pm'), __('Private Messages', 'dexs-pm'), 'read', 'pm', 'user_pm', plugins_url('images/thisicon.png' , __FILE__));
-				add_submenu_page( 'pm', __('Send PM', 'dexs-pm'), __('Send PM', 'dexs-pm'), 'manage_options', 'pm_send', 'user_pm');
-				add_submenu_page( 'pm', __('PM Outbox', 'dexs-pm'), __('PM Outbox', 'dexs-pm'), 'manage_options', 'pm_outbox', 'user_pm');
-				add_submenu_page( 'pm', __('PM Archive', 'dexs-pm'), __('PM Archive', 'dexs-pm'), 'manage_options', 'pm_archive', 'user_pm');
-				add_submenu_page( 'pm', __('PM Trash', 'dexs-pm'), __('PM Trash', 'dexs-pm'), 'manage_options', 'pm_trash', 'user_pm');
-				add_submenu_page( 'pm', __('PM Settings', 'dexs-pm'), __('PM Settings', 'dexs-pm'), 'manage_options', 'pm_settings', 'user_pm');
-			}
-		} else {																	# Subordinate under USERS
-			add_submenu_page( 'users.php', __('Private Messages', 'dexs-pm'), __('Private Messages', 'dexs-pm'), 'manage_options', 'pm', 'user_pm');
-		}
-		
-		if($option['showin_toolbar'] == "1"){
-			add_action('admin_bar_menu', 'dexs_pm_system_toolbar', 201);
-			load_toolbar();
-		}
-	}
-}
-
-
-/***************************
-	OUTPUT
-***************************/
-function pm_frontend_shortcode(){
-	global $wpdb, $current_user, $default, $default_permissions;
-	$style_options = get_option('dexs_pm_system', $default);
-		
-	include("frontend/frontend.php");
-}
-
-include('admin/pm_help.php');
-function pm_config(){
-    global $wpdb, $default, $default_permissions, $wp_roles;
-	include_once('admin/pm_settings.php');
-	
-	$option = get_option('dexs_pm_system', $default);
-	$option_permissions = get_option('dexs_pm_permissions', $default_permissions);
-		
-	$permission = ""; $mail = ""; $general = "";
-	if(isset($_GET['act']) && $_GET['act'] == 'permission'){
-		$permission = 'nav-tab-active';
-	} elseif(isset($_GET['act']) && $_GET['act'] == 'mail'){
-		$mail = 'nav-tab-active';
-	} else {
-		$general = 'nav-tab-active';
-	}
-	
-	echo "<div class='wrap'>";
-		echo "<div id='icon-options-general' class='icon32'></div>";
-		echo "<h2 class='nav-tab-wrapper'>";
-			echo "<a href='options-general.php?page=pm_config' class='nav-tab $general'>".__('General', 'dexs-pm')."</a>";
-			echo "<a href='options-general.php?page=pm_config&act=permission' class='nav-tab $permission'>".__('Permissions', 'dexs-pm')."</a>";
-			if($option['email_notice'] == "1"){
-				echo "<a href='options-general.php?page=pm_config&act=mail' class='nav-tab $mail'>".__('eMail Notification', 'dexs-pm')."</a>";
-			}
-		echo "</h2>";
-		echo "<br class='clear'>";
-		
-		if(isset($_GET['act']) && $_GET['act'] == 'permission'){
-			include("admin/pm_permissions.php");
-		} elseif(isset($_GET['act']) && $_GET['act'] == 'mail'){
-			include("admin/pm_notification.php");
+		   require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+		   dbDelta($sql);
 		} else {
-			include("admin/pm_general.php");
-		}		
-	echo "</div>";
-}
+			/* UPDATE */
+			update_option("dexs_pm_system", DPM_S_VER);
+			
+			/* 
+			 *	NOTE: 	Version 1.0.0 contains a complete new DB table
+			 *			The data/messages from the old table will be automatically converted and inserted into the new table.
+			 *			You just have to go into the “Dexs PM Settings” and click the blue “Update” button.
+			 */
+			$sql = "CREATE TABLE IF NOT EXISTS ".$wpdb->prefix."dexs_pmsystem(
+				pm_id BIGINT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+				pm_subject VARCHAR(150) NOT NULL,
+				pm_message TEXT NOT NULL,
+				pm_sender BIGINT(20) NOT NULL,
+				pm_recipients TEXT NOT NULL,				
+				pm_meta TEXT NOT NULL,
+				pm_send TIMESTAMP NOT NULL				
+			);";
+			
+			/*
+			 *	NOTE:	You need to reconfigure the Dexs PM System.
+			 */
+			delete_option('dexs_pm_settings');
+			delete_option('dexs_pm_permissions');
+			delete_option('dexs_pm_email');
 
-function user_pm(){
-    global $wpdb, $current_user, $wp_roles, $default, $default_permissions;
-	get_currentuserinfo();
-	$table_name = $wpdb->prefix."dexs_pms";
-	$option = get_option('dexs_pm_system', $default);
-	
-	if($_GET["page"] == "pm" && isset($_GET['table']) && $_GET['table'] == "send_pm" || $_GET["page"] == "pm_send"){
-		$cur = "s";
-	} elseif($_GET["page"] == "pm" && isset($_GET['table']) && $_GET['table'] == "pm_outbox" || $_GET["page"] == "pm_outbox"){
-		$cur = "o";
-	} elseif($_GET["page"] == "pm" && isset($_GET['table']) && $_GET['table'] == "pm_trash" || $_GET["page"] == "pm_trash"){
-		$cur = "t";
-	} elseif($_GET["page"] == "pm" && isset($_GET['table']) && $_GET['table'] == "pm_archive" || $_GET["page"] == "pm_archive"){
-		$cur = "a";
-	} elseif($_GET["page"] == "pm" && isset($_GET['table']) && $_GET['table'] == "pm_settings" || $_GET["page"] == "pm_settings"){
-		$cur = "c";
-	} else {
-		$cur = " ";
+		   require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+		   dbDelta($sql);
+		}	
 	}
+	register_activation_hook(__FILE__, 'dexs_pms_install');
 	
-	echo "<div class='wrap'>";	
-		echo "<div id='icon' class='icon32'><a href='admin.php?page=pm'><img src='".plugins_url('images/adminpm.png' , __FILE__)."'></a><br></div>";
+	/*
+	 * 	DEINSTALL PM SYSTEM
+	 */
+	function dexs_pms_uninstall(){
+		 global $wpdb;
 		
-		/* Load Header Style */
-		if($option['showin_navigation'] == 1){
-			if($option['backend_style'] == 0){			# Tabs Style (Like Themes)
-			
-				echo "<h2 class='nav-tab-wrapper'>";
-					echo "<a href='admin.php?page=pm&send_pm' class='nav-tab"; if($cur == "s"){ echo " nav-tab-active"; } echo "'>".__('Send PM', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm' class='nav-tab"; if($cur == " "){ echo " nav-tab-active"; } echo "'>".__('Inbox', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm&table=pm_outbox' class='nav-tab"; if($cur == "o"){ echo " nav-tab-active"; } echo "'>".__('Outbox', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm&table=pm_trash' class='nav-tab"; if($cur == "t"){ echo " nav-tab-active"; } echo "'>".__('Trash', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm&table=pm_archive' class='nav-tab"; if($cur == "a"){ echo " nav-tab-active"; } echo "'>".__('Archive', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm&table=pm_settings' class='nav-tab"; if($cur == "c"){ echo " nav-tab-active"; } echo "'>".__('Settings', 'dexs-pm')."</a>";
-				echo "</h2>";
-				echo "<br>";	
-				
-			} elseif($option['backend_style'] == 1){	# Link Style (Like Posts)
-
-				echo "<h2>".__('Private Messages', 'dexs-pm')."<a href='admin.php?page=pm&table=send_pm' class='add-new-h2'>".__('Write a new PM', 'dexs-pm')."</a></h2>";
-				echo "<ul class='subsubsub'>";
-					echo "<li class='inbox'><a href='admin.php?page=pm'"; if($cur == " "){ echo " class='current'"; } echo ">".__('Inbox', 'dexs-pm')." <span class='count'>(".count_pm("", "inbox").")</span></a> |</li>";
-					echo "<li class='outbox'><a href='admin.php?page=pm&table=pm_outbox'"; if($cur == "o"){ echo " class='current'"; } echo ">".__('Outbox', 'dexs-pm')." <span class='count'>(".count_pm("", "outbox").")</span></a> |</li>";
-					echo "<li class='archive'><a href='admin.php?page=pm&table=pm_archive'"; if($cur == "a"){ echo " class='current'"; } echo ">".__('Archive', 'dexs-pm')." <span class='count'>(".count_pm("", "archive").")</span></a> |</li>";
-					echo "<li class='trash'><a href='admin.php?page=pm&table=pm_trash'"; if($cur == "t"){ echo " class='current'"; } echo ">".__('Trash', 'dexs-pm')." <span class='count'>(".count_pm("", "trash").")</span></a> |</li>";
-					echo "<li class='settings'><a href='admin.php?page=pm&table=pm_settings'"; if($cur == "c"){ echo " class='current'"; } echo ">".__('Settings', 'dexs-pm')." <span class='count'>(".count_pm("", "all").")</span></a></li>";
-				echo "</ul>";	
-				
-			} elseif($option['backend_style'] == 2){	# Menu Style (Like Nothing =D)
-				if($cur == "s"){ echo "<h2>".__('Private Messages', 'dexs-pm')." &rsaquo; ".__('Send', 'dexs-pm')."</h2>"; }
-				if($cur == "o"){ echo "<h2>".__('Private Messages', 'dexs-pm')." &rsaquo; ".__('Outbox', 'dexs-pm')."</h2>"; }
-				if($cur == "t"){ echo "<h2>".__('Private Messages', 'dexs-pm')." &rsaquo; ".__('Trash', 'dexs-pm')."</h2>"; }
-				if($cur == "a"){ echo "<h2>".__('Private Messages', 'dexs-pm')." &rsaquo; ".__('Archive', 'dexs-pm')."</h2>"; }
-				if($cur == "c"){ echo "<h2>".__('Private Messages', 'dexs-pm')." &rsaquo; ".__('Settings', 'dexs-pm')."</h2>"; }
-				if($cur == " "){ echo "<h2>".__('Private Messages', 'dexs-pm')." &rsaquo; ".__('Inbox', 'dexs-pm')."</h2>"; }
-			}
-		} else {
-			if($option['backend_style'] == 0){											# Tabs Style (Like Themes)
-			
-				echo "<h2 class='nav-tab-wrapper'>";
-					echo "<a href='admin.php?page=pm&table=send_pm' class='nav-tab"; if($cur == "s"){ echo " nav-tab-active"; } echo "'>".__('Send PM', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm' class='nav-tab"; if($cur == " "){ echo " nav-tab-active"; } echo "'>".__('Inbox', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm&table=pm_outbox' class='nav-tab"; if($cur == "o"){ echo " nav-tab-active"; } echo "'>".__('Outbox', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm&table=pm_trash' class='nav-tab"; if($cur == "t"){ echo " nav-tab-active"; } echo "'>".__('Trash', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm&table=pm_archive' class='nav-tab"; if($cur == "a"){ echo " nav-tab-active"; } echo "'>".__('Archive', 'dexs-pm')."</a>";
-					echo "<a href='admin.php?page=pm&table=pm_settings' class='nav-tab"; if($cur == "c"){ echo " nav-tab-active"; } echo "'>".__('Settings', 'dexs-pm')."</a>";
-				echo "</h2>";
-				echo "<br>";
-
-			} elseif($option['backend_style'] == 1 || $option['backend_style'] == 2){	# Link Style (Like Posts)
-
-				echo "<h2>".__('Private Messages', 'dexs-pm')."<a href='admin.php?page=pm&table=send_pm' class='add-new-h2'>".__('Write a new PM', 'dexs-pm')."</a></h2>";
-				echo "<ul class='subsubsub'>";
-					echo "<li class='inbox'><a href='admin.php?page=pm'"; if($cur == " "){ echo " class='current'"; } echo ">".__('Inbox', 'dexs-pm')." <span class='count'>(".count_pm("", "inbox").")</span></a> |</li>";
-					echo "<li class='outbox'><a href='admin.php?page=pm&table=pm_outbox'"; if($cur == "o"){ echo " class='current'"; } echo ">".__('Outbox', 'dexs-pm')." <span class='count'>(".count_pm("", "outbox").")</span></a> |</li>";
-					echo "<li class='archive'><a href='admin.php?page=pm&table=pm_archive'"; if($cur == "a"){ echo " class='current'"; } echo ">".__('Archive', 'dexs-pm')." <span class='count'>(".count_pm("", "archive").")</span></a> |</li>";
-					echo "<li class='trash'><a href='admin.php?page=pm&table=pm_trash'"; if($cur == "t"){ echo " class='current'"; } echo ">".__('Trash', 'dexs-pm')." <span class='count'>(".count_pm("", "trash").")</span></a> |</li>";
-					echo "<li class='settings'><a href='admin.php?page=pm&table=pm_settings'"; if($cur == "c"){ echo " class='current'"; } echo ">".__('Settings', 'dexs-pm')." <span class='count'>(".count_pm("", "all").")</span></a></li>";
-				echo "</ul>";
-			
-			}
+		# DELETE THE PM SYSTEM
+		$wpdb->query("DROP TABLE ".$wpdb->prefix."dexs_pmsystem");
+		delete_option('dexs_pm_system');
+		delete_option('dexs_pm_settings');
+		delete_option('dexs_pm_permissions');
+		delete_option('dexs_pm_email');
+		delete_option('dexs_pm_frontend');
+		
+		# DELETE USER SETTINGS
+		$metausers = get_users('meta_key=dexs_pm_settings');
+		foreach ($metausers as $user) {
+		   delete_user_meta($user->ID, 'dexs_pm_settings');
+		}
+	}
+	#register_deactivation_hook(__FILE__, 'dexs_pms_uninstall');			# DEVELOPER-MODE
+	register_uninstall_hook(__FILE__, 'dexs_pms_uninstall');			# USER MODE
+	
+	
+	/*
+	 *	UPGRADE CHECK
+	 */	
+	function dexs_pms_upgrade_me(){
+		$error = dexs_pm_deprecated();
+		
+		if(isset($error) && is_wp_error($error)){
+			echo "<div id='message' class='error'><p>";
+				echo "<b>".__("Dexs PM System - Error:", "dexs-pm")."</b> ".$error->get_error_messages()[0];
+			echo "</p></div>";
+		}
+	}
+	add_action('shutdown', 'dexs_pms_upgrade_me');
+	
+	
+	/*
+	 *	POST FORMS
+	 */
+	function dexs_pms_action_batch(){
+		global $current_user, $dexsPM, $dexsPMA, $WP_Error;
+		get_currentuserinfo();
+		
+		$error = dexs_pm_deprecated();
+		if(isset($error) && is_wp_error($error)){
+			define("DPM_UPGRADE", TRUE);
 		}
 		
-		echo "<br class='clear'>";
-		
-		/* Load Body Content */
-		echo '<link type="text/css" rel="stylesheet" href="'.ADMIN_A_URL.'/include/admin_form.css">';
-		include("include/pm_tables.php");
-		include("include/pm_system.php");
-		
-		if(isset($_GET['table']) && $_GET['table'] == "send_pm" || !isset($_GET['table']) && $_GET['page'] == "send_pm"){
-			if(check_permission($current_user->id, "pm") == false){
-				$errors['goto_max'] = __('You have reached your maximum number of messages. Please delete some!', 'dexs-pm');
-			}
-		}
-		
-		if(isset($errors)){
-			echo '<div id="settings-error-settings_updated" class="error settings-error">';
-				foreach($errors AS $e){
-				echo "<p><b>".$e."</b></p>";
-				}
-			echo '</div>';
-		}
-		if($_GET['send_status'] == "true"){
-			echo '<div id="settings-error-settings_updated" class="updated settings-error">';
-				echo "<p><b>".__('PM successfully sent!', 'dexs-pm')."</b></p>";
-			echo '</div>';
-		}
-		if(isset($_GET['success']) && $_GET['success'] != "save"){ $number = $_GET['success'];
-			echo '<div id="settings-error-settings_updated" class="updated settings-error">';
-				if($number == "1"){
-					echo "<p><b>".__('1 Action was carried out successfully!', 'dexs-pm')."</b></p>";
+		if(defined("DPM_UPGRADE")){
+			if(isset($_POST['upgrade']) && isset($_POST['upgrade_code']) && $_POST['upgrade_code'] == "314159265358979"){
+				if(isset($_POST['convert_data'])){
+					if(dexs_pm_convert_table()){
+						if(delete_old_pm_table()){
+							header("Location: options-general.php?page=pm_config");
+						}
+					}
 				} else {
-					echo "<p><b>".$number." ".__('Actions was carried out successfully!', 'dexs-pm')."</b></p>";				
+					if(delete_old_pm_table()){
+						header("Location: options-general.php?page=pm_config");
+					}
 				}
-			echo '</div>';
+			}
+		} else {
+			if((isset($_POST['dexs_pm']) && (isset($_POST['action']) || isset($_POST['send_action']))) || (isset($_GET['dpm']) && isset($_GET['action']))){
+				$dpm = ""; $action = ""; $pm_id = ""; $s_action = 99;
+				
+				/* DELTE MEDIA CAP */
+				if(isset($_POST['delete'])){
+					$role = array_keys($_POST['delete'])[0];
+					if($role = get_role($role)){
+						$role->remove_cap("upload_files");
+					}
+					header("Location: options-general.php?page=pm_config&tab=".$_POST['tab']."&success=1");
+				}			
+				
+				/* LOCATION */
+				if(isset($_POST['dexs_pm'])){
+					$dpm = $_POST['dexs_pm'];
+				} elseif(isset($_GET['dpm'])){
+					$dpm = $_GET['dpm'];
+				}
+				if (!is_admin()){
+					$load_page = "?page_id=".$dexsPM->get_frontend_id();
+				} else {
+					$load_page = "?page=pm";
+				}
+				
+				/* ACTION */
+				if(isset($_POST['action'])){
+					$action = $_POST['action'];
+				} elseif(isset($_POST['send_action'])){
+					$action = 99;
+					if(is_array($_POST['send_action'])){
+						$s_action = array_keys($_POST['send_action'])[0];
+					} else {
+						$s_action = $_POST['send_action'];
+					}
+				} elseif(isset($_GET['action'])){
+					$action = $_GET['action'];
+				}
+				
+				/* PM ID */
+				if(isset($_POST['pm_id'])){
+					$pm_id = $_POST['pm_id'];
+				} elseif(isset($_GET['pmid'])){
+					$pm_id = $_GET['pmid'];
+					$_POST['pm_id'] = $_GET['pmid'];
+				}
+
+				if(is_array($action)){
+					if(count($action) == 2){
+						unset($action[array_search("-1", $action)]);
+						$action = implode("", $action);
+					} else if(count($action) == 1 && is_string(array_values($action)[0])){
+						$action = implode("", array_keys($action));
+					}
+				}
+				
+				/* SETTINGS -> DEXS PM SYSTEM */
+				if($dpm == "settings" && $action == "6"){
+					if(isset($_POST['save'])){
+						$success_url = "options-general.php?page=pm_config&tab=".$_POST['tab']."&success=1";
+					
+						if(!$dexsPM->set_pm_settings($_POST['tab'], $_POST)){
+							$GLOBALS['pm_error'] = __("An unknown Error occurred! The settings couldn't be saved.", "dexs-pm");
+						}
+					} else if(isset($_POST['reset'])){
+						$success_url = "options-general.php?page=pm_config&tab=".$_POST['tab']."&success=2";
+					
+						if(!$dexsPM->set_to_default($_POST['tab'])){
+							$GLOBALS['pm_error'] = __("An unknown Error occurred! The settings couldn't be reset.", "dexs-pm");
+						}
+					} else if(isset($_POST['send_test_mail'])){
+						$success_url = "options-general.php?page=pm_config&tab=".$_POST['tab']."&success=3";
+						
+						if(!$dexsPM->set_pm_settings($_POST['tab'], $_POST)){
+							$GLOBALS['pm_error'] = __("An unknown Error occurred! The settings couldn't be saved.", "dexs-pm");
+						} else {
+							if(!$dexsPM->send_email_note(NULL, $_POST['test_mail_recipient'])){
+								if(!isset($GLOBALS['pm_error'])){
+									$GLOBALS['pm_error'] = __("An unknown Error occurred! The test eMail couldn't be sent.", "dexs-pm");
+								}
+							}
+						}
+					}
+				}
+				
+				/* BULK ACTIONS */
+				if(($dpm == "folder" || $dpm == "read_pm") && $action < 6){
+					if(isset($_GET['folder'])){
+						$folder = $_GET['folder'];
+						if($folder == 7){
+							$folder = 0;
+						}
+					} else {
+						$folder = 0;
+					}
+					$success_url = $GLOBALS['pagenow'].$load_page."&folder=$folder&success=".$action;
+					if(!$dexsPMA->pm_action($action, $pm_id, $current_user->ID)){
+						$GLOBALS['pm_error'] = __("An unknown Error occurred!", "dexs-pm");
+					}
+				}
+				
+				/* USER SETTINGS */
+				if($dpm == "user_settings" && $action == 7){
+					$success_url = $GLOBALS['pagenow'].$load_page."&folder=6&success=1";
+					
+					if(isset($_POST['save'])){
+						if(!$dexsPM->user_settings("update", $_POST)){
+							$GLOBALS['pm_error'] = __("An unknown Error occurred! The settings couldn't be saved.", "dexs-pm");					
+						}
+					} else {
+						if(!$dexsPM->user_settings("reset", $_POST)){
+							$GLOBALS['pm_error'] = __("An unknown Error occurred! The settings couldn't be reset.", "dexs-pm");				
+						}
+					}
+				}
+				
+				/* SEND PM */
+				if($dpm == "send_pm" && ($s_action == 0 || $s_action == 8)){
+					if($dexsPMA->send_pm_action($_POST, $current_user->ID)){
+						$success_url = $GLOBALS['pagenow'].$load_page."&folder=1&send=1";
+					}
+				}
+				
+				/* ANSWER || FORWARD */
+				if($dpm == "read_pm" && ($s_action == 1 || $s_action == 2)){
+					header("Location: ".$GLOBALS['pagenow'].$load_page."&folder=5&send_action=".$s_action."&pmid=".$_GET['pmid']);				
+				}
+				
+				/* HEADER */
+				if(!isset($success_url)  && !isset($GLOBALS['pm_error'])){
+					$GLOBALS['pm_error'] = __("An unknown Error occurred! The transferred datas are faulty.", "dexs-pm");
+					
+					if(empty($pm_id)){
+						$GLOBALS['pm_error'] = __("An unknown Error occurred! You have no message selected.", "dexs-pm");
+					}
+				}	
+				if(!isset($GLOBALS['pm_error'])){
+					header("Location: $success_url");
+				}
+			}
 		}
-		if(isset($_GET['success']) && $_GET['success'] == "save"){
-			echo '<div id="settings-error-settings_updated" class="updated settings-error">';
-				echo "<p><b>".__('Your personal preferences have been saved!', 'dexs-pm')."</b></p>";
-			echo '</div>';
+	}
+	add_action('plugins_loaded', 'dexs_pms_action_batch');
+	
+
+	/*
+	 *	ADD SETTINGS MENU ENTRY
+	 */
+	function dexs_pms_admin(){
+		add_submenu_page('options-general.php', "Dexs PM System", "Dexs PM System", 'manage_options', 'pm_config', 'dexs_pms_admin_config');
+	}
+	add_action('admin_menu', 'dexs_pms_admin');
+	
+	
+	/*
+	 *	ADD SETTINGS MENU OUTPUT
+	 */
+	function dexs_pms_admin_config(){
+		global $wpdb, $wp_roles, $dexsPM;
+		if(defined("DPM_UPGRADE") && DPM_UPGRADE){
+			dexs_pm_upgrade_table();
+		} else {
+			include("dexs-pm-admin.php");
 		}
+	}
+	
+	
+	/*
+	 *	ADD BACKEND INTERFACE MENU
+	 */
+	function dexs_pms_backend(){
+		global $current_user, $dexsPM;
+		get_currentuserinfo();
 		
-		if(!isset($get_reci)){ $get_reci = ""; }
-		if(!isset($get_subject)){ $get_subject = ""; }
-		if(!isset($get_message)){ $get_message = ""; }
-		
-		if($cur == "s"){ pm_send_table($get_reci, $get_subject, $get_message); }
-		if($cur == "o"){ get_pm_table("outbox"); }
-		if($cur == "t"){ get_pm_table("trash"); }
-		if($cur == "a"){ get_pm_table("archive"); }
-		if($cur == "c"){ pm_settings_table(); }
-		if($cur == " "){ get_pm_table("inbox"); }
+		if(!defined("DPM_UPGRADE")){
+			$option = $dexsPM->load_pm_settings("settings");
 			
-	echo "</div>";
-}
+			if($dexsPM->check_permissions("backend", $current_user->ID)){
+				
+				if($option['backend_navi']){
+					if($option['backend_style'] == 0 || $option['backend_style'] == 1){
+						/* ONE PAGE STYLE */
+						add_menu_page(__('Private Messages', 'dexs-pm'), __('Private Messages', 'dexs-pm'), 'read', 'pm', 'user_pm', plugins_url('images/thisicon.png' , __FILE__));
+					} elseif($option['backend_style'] == 2){
+						/* FIVE PAGES STYLE */
+						add_menu_page(__('Private Messages', 'dexs-pm'), __('Private Messages', 'dexs-pm'), 'read', 'pm', 'user_pm', plugins_url('images/thisicon.png' , __FILE__));
+						add_submenu_page( 'pm', __('Send PM', 'dexs-pm'), __('Send PM', 'dexs-pm'), 'read', 'pm&folder=5', 'user_pm');
+						add_submenu_page( 'pm', __('PM Outbox', 'dexs-pm'), __('PM Outbox', 'dexs-pm'), 'read', 'pm&folder=1', 'user_pm');
+						add_submenu_page( 'pm', __('PM Trash', 'dexs-pm'), __('PM Trash', 'dexs-pm'), 'read', 'pm&folder=2', 'user_pm');
+						add_submenu_page( 'pm', __('PM Archive', 'dexs-pm'), __('PM Archive', 'dexs-pm'), 'read', 'pm&folder=4', 'user_pm');
+						add_submenu_page( 'pm', __('PM Settings', 'dexs-pm'), __('PM Settings', 'dexs-pm'), 'read', 'pm&folder=6', 'user_pm');
+					}
+				} else {
+					/* SUPORDINATE UNDER THE USERS MENU */
+					add_submenu_page( 'users.php', __('Private Messages', 'dexs-pm'), __('Private Messages', 'dexs-pm'), 'read', 'pm', 'user_pm');
+				}
+				
+				if($option['backend_toolbar']){
+					add_action('admin_bar_menu', 'dexs_pms_toolbar', 201);
+					
+					/* TOOLBAR */
+					function dexs_pms_toolbar($wp_admin_bar){
+						global $wpdb, $wp_admin_bar, $dexsPM, $dexsPMA;
+						
+						$count = $dexsPMA->count_messages(6);
+						
+						if($count["new"] == 0){
+							$act = "";
+							$title = __('Inbox', 'dexs-pm');
+						} else {
+							$act = "active";
+							$title = $count["new"]." ".__('new Messages', 'dexs-pm');
+							if($count["new"] == 1){
+								$title = __('1 new Message', 'dexs-pm');						
+							}
+						}
+						
+						$href = ($dexsPM->load_pm_settings("settings", "backend_navi"))? "admin.php?page=pm" : "users.php?page=pm";
+						?>
+						<style type="text/css">
+						<!--
+							#wp-admin-bar-pm_system .ab-item .ab-icon{
+								background-image: url('<?php echo plugins_url('images/admin-icons.png' , __FILE__); ?>');
+								background-position: 0px 0px;
+								background-repeat: no-repeat;
+								width: 20px;
+								height: 20px;
+								margin-top: 5px;
+								padding-left: 1px;
+								padding-right: 2px;	
+								float:left;
+							}
+							#wp-admin-bar-pm_system.hover .ab-item .ab-icon{
+								background-position: 0 -18px;
+							}
+							#wp-admin-bar-pm_system .ab-item .active{
+								background-position: 0 -36px;
+								color: #e8840e;
+							}						
+							#wp-admin-bar-pm_system #wp-admin-bar-pm_new_message,
+							#wp-admin-bar-pm_system #wp-admin-bar-pm_write_new_message{
+								text-align:center;						
+							}				
+							#wp-admin-bar-pm_system #wp-admin-bar-pm_new_message{
+								font-weight:bold;
+							}
+							#wp-admin-bar-pm_system #wp-admin-bar-pm_write_new_message{
+								background-color: #eaf2fa;
+							}
+							#wp-admin-bar-pm_system #wp-admin-bar-pm_write_new_message:hover{
+								background-color: #eaf2fa;
+							}
+						-->
+						</style>
+						<?php					
+						$args['main'] = array(
+							'id' => 'pm_system',
+							'parent' => 'top-secondary',
+							'title' => "<span class='ab-icon $act'></span> <span class='$act'>".$count["new"]."</span>",
+							'href' => $href,
+							'class' => 'test',
+							'meta' => array('class' => 'dexs_pm_system')
+						);
+						
+						$args['write'] = array(
+							'id' => 'pm_write_new_message',
+							'parent' => 'pm_system',
+							'title' => __('Write a new Message', 'dexs-pm'),
+							'href' => $href."&folder=5",
+							'meta' => array('class' => 'dexs_pm_system')
+						);
+						
+						$args['new'] = array(
+							'id' => 'pm_new_message',
+							'parent' => 'pm_system',
+							'title' => $title,
+							'href' => $href."&folder=0",
+							'meta' => array('class' => 'dexs_pm_system')
+						);
+						
+						$args['outbox'] = array(
+							'id' => 'pm_message_outbox',
+							'parent' => 'pm_system',
+							'title' => "<div style='color: rgb(33, 117, 155);text-shadow: none;display:inline-block;width:85%;'>".__('Folder: Outbox', 'dexs-pm')."</div>
+										<div class='dexs-admin-bar-count' style='color: rgb(33, 117, 155);text-shadow: none;display:inline;text-align:right;'>(".$count["outbox"].")</div>",
+							'href' => $href."&folder=1",
+							'meta' => array('class' => 'dexs_pm_system')
+						);
+						
+						$args['archive'] = array(
+							'id' => 'pm_message_archive',
+							'parent' => 'pm_system',
+							'title' => "<div style='color: rgb(33, 117, 155);text-shadow: none;display:inline-block;width:85%;'>".__('Folder: Archive', 'dexs-pm')."</div>
+										<div class='dexs-admin-bar-count' style='color: rgb(33, 117, 155);text-shadow: none;display:inline;text-align:right;'>(".$count["archive"].")</div>",
+							'href' => $href."&folder=4",
+							'meta' => array('class' => 'dexs_pm_system')
+						);
+						
+						$args['trash'] = array(
+							'id' => 'pm_message_trash',
+							'parent' => 'pm_system',
+							'title' => "<div style='color: rgb(33, 117, 155);text-shadow: none;display:inline-block;width:85%;'>".__('Folder: Trash', 'dexs-pm')."</div>
+										<div class='dexs-admin-bar-count' style='color: rgb(33, 117, 155);text-shadow: none;display:inline;text-align:right;'>(".$count["trash"].")</div>",
+							'href' => $href."&folder=2",
+							'meta' => array('class' => 'dexs_pm_system')
+						);
+						
+						$wp_admin_bar->add_node($args['main']);
+						$wp_admin_bar->add_node($args['new']);
+						$wp_admin_bar->add_node($args['write']);
+						$wp_admin_bar->add_node($args['outbox']);
+						$wp_admin_bar->add_node($args['archive']);
+						$wp_admin_bar->add_node($args['trash']);
+					}
+				}
+			}
+		}
+	}
+	add_action('admin_menu', 'dexs_pms_backend');
+	
+	
+	/*
+	 *	ADD BACKEND INTERFACE MENU OUTPUT
+	 */		
+	function user_pm(){
+		global $wpdb, $current_user, $wp_roles, $dexsPM, $dexsPMA, $dexsPMT;
+		get_currentuserinfo();
+		
+		if(!defined("DPM_UPGRADE")){		
+			if($dexsPM->check_permissions("images")){
+				$userdata = get_userdata($current_user->ID);
+				
+				if(!current_user_can('upload_files')){
+					$add_role_cap = get_role($userdata->roles[0]);
+					$add_role_cap->add_cap('upload_files');
+				}
+			}
+			
+			include("dexs-pm-backend.php");
+		}
+	}
+	
+
+	/*
+	 *	ADD FRONTEND INTERFACE
+	 */	
+	add_shortcode('pm_system', 'dexs_pms_frontend');
+	function dexs_pms_frontend(){
+		global $dexsPM, $dexsPMT, $current_user;
+		get_currentuserinfo();
+		
+		if(!defined("DPM_UPGRADE")){
+			if(is_user_logged_in()){
+				if($dexsPM->check_permissions("images")){
+					$userdata = get_userdata($current_user->ID);
+					
+					if(!current_user_can('upload_files')){
+						$add_role_cap = get_role($userdata->roles[0]);
+						$add_role_cap->add_cap('upload_files');
+					}
+				}
+				$dexsPMT->get_pm_template();
+			} else {			
+				$args = array(
+					'echo' => true,
+					'redirect' => site_url( $_SERVER['REQUEST_URI'] ), 
+					'form_id' => 'loginform',
+					'label_username' => __( 'Username' ),
+					'label_password' => __( 'Password' ),
+					'label_remember' => __( 'Remember Me' ),
+					'label_log_in' => __( 'Log In' ),
+					'id_username' => 'user_login',
+					'id_password' => 'user_pass',
+					'id_remember' => 'rememberme',
+					'id_submit' => 'wp-submit',
+					'remember' => true,
+					'value_username' => NULL,
+					'value_remember' => false 
+				);
+				
+				echo "<center>".__("You must be logged in to use this function!", "dexs-pm")."<br><br>";
+				wp_login_form($args);
+				echo "</center>";
+			}		
+		}		
+	}
+	
+	/*
+	 *	DEXS PM SYSTEM
+	 *
+	 *	@VERSION	1.0.0 RC.1 (PreHexley)
+	 *	@VERSION	ReleaseCandidate 1
+	 *	@AUTHOR		SamBrishes (PYTES.NET)
+	 *
+	 *	@SUPPORT	Twitter: 	@PytesDev
+	 *	@SUPPORT	eMail:		sambrishes@gmx.net
+	 *	@SUPPORT	WordPress Plugin Page
+	 */
 ?>

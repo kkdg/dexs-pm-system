@@ -1,0 +1,1296 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Dexs PM System 1.0.0 RC.1\n"
+"POT-Creation-Date: 2013-07-31 17:00+0100\n"
+"PO-Revision-Date: 2013-07-31 17:00+0100\n"
+"Last-Translator: \n"
+"Language-Team: SamBrishes (PYTES.NET)\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-SearchPath-2: ../..\n"
+
+#: ../admin.general.php:3 ../../dexs-pm-admin.php:11
+#: ../../include/admin.general.php:3
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: ../admin.general.php:7 ../../include/admin.general.php:7
+msgid "Recipient List Style"
+msgstr "Empfänger Auflistungsstil"
+
+#: ../admin.general.php:10 ../../include/admin.general.php:10
+msgid "AutoComplete Input Field"
+msgstr "Autovervollständigung"
+
+#: ../admin.general.php:11 ../../include/admin.general.php:11
+msgid "DropDown Selection Field"
+msgstr "DropDown Auswahlfeld"
+
+#: ../admin.general.php:17 ../../include/admin.general.php:17
+msgid "Enable the eMail Notifications"
+msgstr "eMail Benachrichtigungen aktivieren"
+
+#: ../admin.general.php:20 ../admin.general.php:30 ../admin.general.php:101
+#: ../backend.tables.php:442 ../backend.tables.php:447
+#: ../../include/admin.general.php:20 ../../include/admin.general.php:30
+#: ../../include/admin.general.php:101 ../../include/backend.tables.php:442
+#: ../../include/backend.tables.php:447
+#: ../../templates/the_system/settings.php:57
+#: ../../templates/the_system/settings.php:62
+msgid "Yes"
+msgstr "Ja"
+
+#: ../admin.general.php:22 ../admin.general.php:32 ../admin.general.php:103
+#: ../backend.tables.php:437 ../backend.tables.php:446
+#: ../../include/admin.general.php:22 ../../include/admin.general.php:32
+#: ../../include/admin.general.php:103 ../../include/backend.tables.php:437
+#: ../../include/backend.tables.php:446
+#: ../../templates/the_system/settings.php:52
+#: ../../templates/the_system/settings.php:61
+msgid "No"
+msgstr "Nein"
+
+#: ../admin.general.php:27 ../../include/admin.general.php:27
+msgid "Show our Copyright Notice"
+msgstr "Unsere Copyright Notiz anzeigen"
+
+#: ../admin.general.php:37 ../../include/admin.general.php:37
+msgid "Max. Attachment Size (in kB)"
+msgstr "Max. Größe des Anhangs (in kB)"
+
+#: ../admin.general.php:44 ../../include/admin.general.php:44
+msgid "Allowed Attachment formats"
+msgstr "Erlaubte Formate"
+
+#: ../admin.general.php:48 ../../include/admin.general.php:48
+msgid "Seperate the extensions with a comma."
+msgstr "Trenne die Endungen mit einem Komma."
+
+#: ../admin.general.php:54 ../../include/admin.general.php:54
+msgid "Default Permission Settings for undefined Custom User Roles"
+msgstr "Standard Berechtigungen für eigene, undefinierte Benutzerrollen"
+
+#: ../admin.general.php:72 ../../include/admin.general.php:72
+msgid "Backend Settings"
+msgstr "Backend Einstellungen"
+
+#: ../admin.general.php:76 ../../include/admin.general.php:76
+msgid "Backend Style"
+msgstr "Backend Stil"
+
+#: ../admin.general.php:79 ../../include/admin.general.php:79
+msgid "One Page - Tab Style"
+msgstr "Eine Seite - Tab Stil"
+
+#: ../admin.general.php:80 ../../include/admin.general.php:80
+msgid "One Page - Link Style"
+msgstr "Eine Seite - Link Stil"
+
+#: ../admin.general.php:81 ../../include/admin.general.php:81
+msgid "Five Pages - Menu Style"
+msgstr "Fünf Seiten - Menü Stil"
+
+#: ../admin.general.php:83 ../../include/admin.general.php:83
+msgid ""
+"\"Five-Pages - Menu Style\" is not available, when you Subordinate the Menu "
+"under \"Users\"."
+msgstr ""
+"\"Fünf Seiten - Menü Stil\" ist nicht verfügbar, wenn Du das Menü unter "
+"\"Benutzer\" unterordnest."
+
+#: ../admin.general.php:88 ../../include/admin.general.php:88
+msgid "Backend Navigation Style"
+msgstr "Backend Navigationsstil"
+
+#: ../admin.general.php:91 ../../include/admin.general.php:91
+msgid "Extra menu entry"
+msgstr "Extra Menü Eintrag"
+
+#: ../admin.general.php:93 ../../include/admin.general.php:93
+msgid "Subordinate under Users"
+msgstr "Unter Benutzer unterordnen"
+
+#: ../admin.general.php:98 ../../include/admin.general.php:98
+msgid "Show PM Status in Toolbar"
+msgstr "Toolbar PM Status Anzeige"
+
+#: ../admin.general.php:110 ../../include/admin.general.php:110
+msgid "Frontend Settings"
+msgstr "Frontend Einstellungen"
+
+#: ../admin.general.php:114 ../../include/admin.general.php:114
+msgid "Frontend Table Settings"
+msgstr "Frontend Tabellen Einstellung"
+
+#: ../admin.general.php:117 ../../include/admin.general.php:117
+msgid "Hide the excerpt row"
+msgstr "Die Spalte \"Auszug\" verbergen"
+
+#: ../admin.general.php:118 ../../include/admin.general.php:118
+msgid "Show the excerpt row"
+msgstr "Die Spalte \"Auszug\" anzeigen"
+
+#: ../admin.general.php:124 ../../include/admin.general.php:124
+msgid "Frontend Template"
+msgstr "Frontend Design"
+
+#: ../admin.general.php:142 ../admin.notifications.php:82
+#: ../admin.permissions.php:179 ../backend.tables.php:488
+#: ../../include/admin.general.php:142
+#: ../../include/admin.notifications.php:82
+#: ../../include/admin.permissions.php:179
+#: ../../include/backend.tables.php:488
+#: ../../templates/the_system/settings.php:101
+msgid "Save Changes"
+msgstr "Änderungen Speichern"
+
+#: ../admin.general.php:143 ../admin.notifications.php:83
+#: ../admin.permissions.php:112 ../backend.tables.php:489
+#: ../../include/admin.general.php:143
+#: ../../include/admin.notifications.php:83
+#: ../../include/admin.permissions.php:112
+#: ../../include/backend.tables.php:489
+#: ../../templates/the_system/settings.php:102
+msgid "Reset to Default"
+msgstr "Einstellungen Zurücksetzen"
+
+#: ../admin.notifications.php:4 ../../include/admin.notifications.php:4
+msgid ""
+"<b>Error:</b> The eMail Notification System is disabled! You can activate "
+"the System under the \"General Settings\" Tab."
+msgstr ""
+"<b>Fehler:</b> Das eMail Benachrichtigungssystem ist deaktiviert! Du kannst "
+"es unter \"Allgemeine Einstellungen\" aktivieren."
+
+#: ../admin.notifications.php:9 ../../include/admin.notifications.php:9
+msgid "eMail Notification Configruation"
+msgstr "eMail Benachrichtigung"
+
+#: ../admin.notifications.php:10 ../../include/admin.notifications.php:10
+msgid ""
+"The eMail Message will be stored in the <code>mail.php</code> file, in the "
+"plugin directory."
+msgstr ""
+"Die eMail Nachricht wird in der <code>mail.php</code> Datei, im Plugin "
+"Verzeichnis, gespeichert."
+
+#: ../admin.notifications.php:14 ../../include/admin.notifications.php:14
+msgid "eMail Address (Sender)"
+msgstr "eMail Adresse (Absender)"
+
+#: ../admin.notifications.php:21 ../../include/admin.notifications.php:21
+msgid "eMail Address (Reply-To)"
+msgstr "eMail Adresse (Antwort an)"
+
+#: ../admin.notifications.php:24 ../../include/admin.notifications.php:24
+msgid ""
+"Specify an exist(!) eMail address, when you want that the recipients can "
+"answer to a notification!"
+msgstr ""
+"Wenn die Empfänger auf die eMail antworten können sollen, solltest Du eine "
+"existierende(!) eMail Adresse angeben!"
+
+#: ../admin.notifications.php:29 ../../include/admin.notifications.php:29
+msgid "eMail Subject"
+msgstr "eMail Betreff"
+
+#: ../admin.notifications.php:36 ../../include/admin.notifications.php:36
+msgid "eMail Message"
+msgstr "eMail Nachricht"
+
+#: ../admin.notifications.php:40 ../../include/admin.notifications.php:40
+msgid "Blog Shortcodes:"
+msgstr "Blog Shortcodes:"
+
+#: ../admin.notifications.php:41 ../../include/admin.notifications.php:41
+msgid "Site Title"
+msgstr "Titel der Seite"
+
+#: ../admin.notifications.php:41 ../admin.notifications.php:42
+#: ../admin.notifications.php:43 ../../include/admin.notifications.php:41
+#: ../../include/admin.notifications.php:42
+#: ../../include/admin.notifications.php:43
+msgid "Example:"
+msgstr "Beispiel"
+
+#: ../admin.notifications.php:42 ../../include/admin.notifications.php:42
+msgid "Home Url"
+msgstr "URL zur Seite"
+
+#: ../admin.notifications.php:43 ../../include/admin.notifications.php:43
+msgid "eMail Adress"
+msgstr "eMail Adresse"
+
+#: ../admin.notifications.php:44 ../../include/admin.notifications.php:44
+msgid "PM Shortcodes:"
+msgstr "PM Shortcodes:"
+
+#: ../admin.notifications.php:46 ../../include/admin.notifications.php:46
+msgid "PM Recipient Name"
+msgstr "PM Empfängername"
+
+#: ../admin.notifications.php:47 ../../include/admin.notifications.php:47
+msgid "PM Sender Name"
+msgstr "PM Sendername"
+
+#: ../admin.notifications.php:49 ../../include/admin.notifications.php:49
+msgid "PM Subject"
+msgstr "PM Betreff"
+
+#: ../admin.notifications.php:50 ../../include/admin.notifications.php:50
+msgid "PM Text (Full)"
+msgstr "PM Nachricht (Ganz)"
+
+#: ../admin.notifications.php:52 ../backend.tables.php:465
+#: ../../include/admin.notifications.php:52
+#: ../../include/backend.tables.php:465
+msgid "Number"
+msgstr "Nummer"
+
+#: ../admin.notifications.php:52 ../../include/admin.notifications.php:52
+msgid "PM Text Excerpt: Replace <b>Number</b> with any number of letters!"
+msgstr "PM Auszug: Ersetze <b>Nummer</b> mit einer beliebigen Zahl!"
+
+#: ../admin.notifications.php:54 ../../include/admin.notifications.php:54
+msgid "PM Send Date"
+msgstr "PM Absende-Datum"
+
+#: ../admin.notifications.php:55 ../../include/admin.notifications.php:55
+msgid "M Send Time"
+msgstr "M Absende-Uhrzeit"
+
+#: ../admin.notifications.php:57 ../../include/admin.notifications.php:57
+msgid "Link to the PM (Frontend View)"
+msgstr "Link zur PM (Frontend Ansicht)"
+
+#: ../admin.notifications.php:58 ../../include/admin.notifications.php:58
+msgid "Link to the PM (Backend View)"
+msgstr "Link zur PM (Backend Ansicht)"
+
+#: ../admin.notifications.php:70 ../../include/admin.notifications.php:70
+msgid "Send a Test eMail to:"
+msgstr "Sende eine Test eMail an:"
+
+#: ../admin.notifications.php:74 ../../include/admin.notifications.php:74
+msgid "Send Now"
+msgstr "Jetzt Senden"
+
+#: ../admin.permissions.php:3 ../../include/admin.permissions.php:3
+msgid "Role Permission Settings"
+msgstr "Benutzerrollen Konfiguration"
+
+#: ../admin.permissions.php:6 ../../include/admin.permissions.php:6
+msgid "IMPORTANT NOTICE (Applies only to Enable Images in PMs):"
+msgstr "WICHTIGE NOTIZ (Gilt nur für Aktiviere Bilder in PMs):"
+
+#: ../admin.permissions.php:7 ../../include/admin.permissions.php:7
+msgid ""
+"The subscriber and the contributor role can't upload files (images) by "
+"WordPress default!"
+msgstr ""
+"Die Abonnenten und Mitarbeiter Rolle kann standardmäßig keine Dateien "
+"(Bilder) hochladen!"
+
+#: ../admin.permissions.php:8 ../../include/admin.permissions.php:8
+msgid ""
+"If you are now admitting these roles attest to upload images, they will then "
+"also have access to the Media menu!"
+msgstr ""
+"Erlaubst Du diesen Rollen nun den Upload von Bildern können diese auch auf "
+"das Medien Menü zugreifen."
+
+#: ../admin.permissions.php:9 ../../include/admin.permissions.php:9
+msgid ""
+"They have therefore access to ALL uploaded media files (except the pm "
+"attachments)!"
+msgstr ""
+"Diese haben somit Zugriff auf ALLE hochgeladenen Dateien (außer den PM "
+"Anhängen)!"
+
+#: ../admin.permissions.php:16 ../admin.permissions.php:26
+#: ../../include/admin.permissions.php:16
+#: ../../include/admin.permissions.php:26
+msgid "(Custom) Role"
+msgstr "(Benutzerdefinierte) Rolle"
+
+#: ../admin.permissions.php:17 ../admin.permissions.php:27
+#: ../../include/admin.permissions.php:17
+#: ../../include/admin.permissions.php:27
+msgid "Activate PM System"
+msgstr "PM System aktivieren"
+
+#: ../admin.permissions.php:18 ../admin.permissions.php:28
+#: ../../include/admin.permissions.php:18
+#: ../../include/admin.permissions.php:28
+msgid "Max Number of PMs"
+msgstr "Max. Anzahl der PMs"
+
+#: ../admin.permissions.php:19 ../admin.permissions.php:29
+#: ../../include/admin.permissions.php:19
+#: ../../include/admin.permissions.php:29
+msgid "Enable ..."
+msgstr "Aktiviere..."
+
+#: ../admin.permissions.php:20 ../admin.permissions.php:30
+#: ../../include/admin.permissions.php:20
+#: ../../include/admin.permissions.php:30
+msgid "Enable Access from..."
+msgstr "Erlaube Zugriff vom"
+
+#: ../admin.permissions.php:56 ../../include/admin.permissions.php:56
+msgid "Included Users can still<br> use the PM system!"
+msgstr "Eingeschlossene Nutzer können das<br> PM System weiterhin nutzen!"
+
+#: ../admin.permissions.php:62 ../../include/admin.permissions.php:62
+msgid "(-1 = Unlimited)"
+msgstr "(-1 = Unlimitiert)"
+
+#: ../admin.permissions.php:71 ../../include/admin.permissions.php:71
+msgid "...Images in PMs"
+msgstr "... Bilder in PMs"
+
+#: ../admin.permissions.php:78 ../../include/admin.permissions.php:78
+msgid "...Attachments in PMs"
+msgstr "...Anhänge in PMs"
+
+#: ../admin.permissions.php:94 ../../include/admin.permissions.php:94
+msgid "...Backend"
+msgstr "...Backend"
+
+#: ../admin.permissions.php:101 ../../include/admin.permissions.php:101
+msgid "...Frontend"
+msgstr "...Frontend"
+
+#: ../admin.permissions.php:120 ../admin.permissions.php:135
+#: ../../include/admin.permissions.php:120
+#: ../../include/admin.permissions.php:135
+msgid "Warning"
+msgstr "Achtung"
+
+#: ../admin.permissions.php:125 ../../include/admin.permissions.php:125
+msgid "Subscriber"
+msgstr "Abonnenten"
+
+#: ../admin.permissions.php:127 ../../include/admin.permissions.php:127
+msgid ""
+"The subscriber role can't upload images in PMs, but have still access to the "
+"Media Menu."
+msgstr ""
+"Die Abonnenten Rolle darf keine Bilder in PMs nutzen, hat aber dennoch "
+"Zugriff auf das Medien Menu."
+
+#: ../admin.permissions.php:128 ../admin.permissions.php:143
+#: ../../include/admin.permissions.php:128
+#: ../../include/admin.permissions.php:143
+msgid "Delete this access"
+msgstr "Entferne diesen Zugriff"
+
+#: ../admin.permissions.php:140 ../../include/admin.permissions.php:140
+msgid "Contributor"
+msgstr "Mitarbeiter"
+
+#: ../admin.permissions.php:142 ../../include/admin.permissions.php:142
+msgid ""
+"The contributor role can't upload images in PMs, but have still access to "
+"the Media Menu."
+msgstr ""
+"Die Mitarbeiter Rolle darf keine Bilder in PMs nutzen, hat aber dennoch "
+"Zugriff auf das Medien Menu."
+
+#: ../admin.permissions.php:151 ../../include/admin.permissions.php:151
+msgid "Individual User Settings"
+msgstr "Individuelle Benutzereinstellungen"
+
+#: ../admin.permissions.php:155 ../../include/admin.permissions.php:155
+msgid "Exclude Users by ID"
+msgstr "Nutzer ausschließen (userID)"
+
+#: ../admin.permissions.php:158 ../admin.permissions.php:166
+#: ../../include/admin.permissions.php:158
+#: ../../include/admin.permissions.php:166
+msgid "Separate the user ids with a comma!"
+msgstr "Trenne die Nutzer IDs mit einem Komma!"
+
+#: ../admin.permissions.php:163 ../../include/admin.permissions.php:163
+msgid "Include Users by ID"
+msgstr "Nutzer einschließen (userID)"
+
+#: ../admin.widget.php:62 ../admin.widget.php:77
+#: ../../include/admin.widget.php:62 ../../include/admin.widget.php:77
+msgid "Go to your inbox!"
+msgstr "Gehe zu Deinem Posteingang!"
+
+#: ../admin.widget.php:63 ../../include/admin.widget.php:63
+msgid "You have a new message!"
+msgstr "Du hast eine neue Nachricht!"
+
+#: ../admin.widget.php:63 ../../include/admin.widget.php:63
+msgid "You have"
+msgstr "Du hast"
+
+#: ../admin.widget.php:63 ../../include/admin.widget.php:63
+msgid "new messages!"
+msgstr "neue Nachrichten!"
+
+#: ../admin.widget.php:68 ../../include/admin.widget.php:68
+msgid "You have no new messages."
+msgstr "Due kast keine neuen Nachrichten."
+
+#: ../admin.widget.php:77 ../../include/admin.widget.php:77
+msgid "Inbox Folder"
+msgstr "Posteingang"
+
+#: ../admin.widget.php:82 ../../include/admin.widget.php:82
+msgid "Go to your outbox!"
+msgstr "Gehe zu Dienem Postausgang!"
+
+#: ../admin.widget.php:82 ../../include/admin.widget.php:82
+msgid "Outbox Folder"
+msgstr "Postausgang"
+
+#: ../admin.widget.php:87 ../../include/admin.widget.php:87
+msgid "Go to your archive!"
+msgstr "Gehe zu Deinem Archiv!"
+
+#: ../admin.widget.php:87 ../../include/admin.widget.php:87
+msgid "Archive Folder"
+msgstr "Archiv"
+
+#: ../admin.widget.php:92 ../../include/admin.widget.php:92
+msgid "Go to your trash!"
+msgstr "Gehe zu Deinem Papierkorb!"
+
+#: ../admin.widget.php:92 ../../include/admin.widget.php:92
+msgid "Trash Folder"
+msgstr "Papierkorb"
+
+#: ../admin.widget.php:176 ../backend.tables.php:461
+#: ../../dexs-pm-backend.php:38 ../../dexs-pm-backend.php:76
+#: ../../dexs-pm-backend.php:80 ../../dexs-pm-backend.php:84
+#: ../../dexs-pm-backend.php:88 ../../dexs-pm-backend.php:92
+#: ../../dexs-pm-backend.php:96 ../../dexs-pm-backend.php:100
+#: ../../dexs-pm-system.php:337 ../../dexs-pm-system.php:340
+#: ../../dexs-pm-system.php:349 ../../include/admin.widget.php:176
+#: ../../include/backend.tables.php:461
+#: ../../templates/the_system/settings.php:75
+msgid "Private Messages"
+msgstr "Nachrichten"
+
+#: ../admin.widget.php:181 ../../include/admin.widget.php:181
+msgid "Widget Title"
+msgstr "Widget Titel"
+
+#: ../admin.widget.php:188 ../../include/admin.widget.php:188
+msgid "Display new Message(s) notice?"
+msgstr "Zeige \"neue Nachrichten\" Notiz?"
+
+#: ../admin.widget.php:193 ../../include/admin.widget.php:193
+msgid "Display folder system?"
+msgstr "Zeige das Ordner System?"
+
+#: ../admin.widget.php:198 ../../include/admin.widget.php:198
+msgid "Display counter bar?"
+msgstr "Zeige den Counter?"
+
+#: ../admin.widget.php:203 ../../include/admin.widget.php:203
+msgid "Display counter number?"
+msgstr "Zeige die Counter Nummer?"
+
+#: ../admin.widget.php:206 ../../include/admin.widget.php:206
+msgid "CSS Color Adjustments"
+msgstr "CSS Farbanpassungen"
+
+#: ../admin.widget.php:209 ../../include/admin.widget.php:209
+msgid "Counter Background"
+msgstr "Counter Hintergrund"
+
+#: ../admin.widget.php:216 ../../include/admin.widget.php:216
+msgid "Counter Border Color"
+msgstr "Counter Rahmenfarbe"
+
+#: ../admin.widget.php:223 ../../include/admin.widget.php:223
+msgid "Counter Bar Color"
+msgstr "Counter Leistenfarbe"
+
+#: ../admin.widget.php:230 ../../include/admin.widget.php:230
+msgid "Counter Font Color"
+msgstr "Counter Schriftfarbe"
+
+#: ../admin.widget.php:237 ../../include/admin.widget.php:237
+msgid "Counter Shadow Color"
+msgstr "Counter Schattenfarbe"
+
+#: ../admin.widget.php:246 ../../include/admin.widget.php:246
+msgid "Leave this option blank to deactivate the box shadow!"
+msgstr "Lasse die Option oberhalb frei um den Boxschatten zu deaktivieren!"
+
+#: ../backend.tables.php:42 ../backend.tables.php:387
+#: ../backend.tables.php:472 ../../dexs-pm-backend.php:25
+#: ../../dexs-pm-backend.php:41 ../../dexs-pm-backend.php:76
+#: ../../dexs-pm-backend.php:100 ../../dexs-pm-system.php:363
+#: ../../include/backend.tables.php:42 ../../include/backend.tables.php:387
+#: ../../include/backend.tables.php:472
+#: ../../templates/the_system/header.php:32
+#: ../../templates/the_system/settings.php:7
+msgid "Inbox"
+msgstr "Posteingang"
+
+#: ../backend.tables.php:47 ../backend.tables.php:397
+#: ../backend.tables.php:473 ../../dexs-pm-backend.php:26
+#: ../../dexs-pm-backend.php:47 ../../dexs-pm-backend.php:80
+#: ../../include/backend.tables.php:47 ../../include/backend.tables.php:397
+#: ../../include/backend.tables.php:473
+#: ../../templates/the_system/header.php:35
+#: ../../templates/the_system/settings.php:17
+msgid "Outbox"
+msgstr "Postausgang"
+
+#: ../backend.tables.php:52 ../backend.tables.php:407
+#: ../backend.tables.php:474 ../../dexs-pm-backend.php:27
+#: ../../dexs-pm-backend.php:53 ../../dexs-pm-backend.php:84
+#: ../../include/backend.tables.php:52 ../../include/backend.tables.php:407
+#: ../../include/backend.tables.php:474
+#: ../../templates/the_system/header.php:41
+#: ../../templates/the_system/settings.php:27
+msgid "Trash"
+msgstr "Papierkorb"
+
+#: ../backend.tables.php:57 ../backend.tables.php:176
+#: ../backend.tables.php:417 ../backend.tables.php:475
+#: ../backend.tables.php:589 ../../dexs-pm-backend.php:28
+#: ../../dexs-pm-backend.php:59 ../../dexs-pm-backend.php:88
+#: ../../include/backend.tables.php:57 ../../include/backend.tables.php:176
+#: ../../include/backend.tables.php:417 ../../include/backend.tables.php:475
+#: ../../include/backend.tables.php:589
+#: ../../templates/the_system/header.php:38
+#: ../../templates/the_system/index.php:95
+#: ../../templates/the_system/message.php:97
+#: ../../templates/the_system/settings.php:37
+msgid "Archive"
+msgstr "Archiv"
+
+#: ../backend.tables.php:76 ../../include/backend.tables.php:76
+#: ../../templates/the_system/message.php:7
+msgid "The message could not be found!"
+msgstr "Die Nachricht konnte nicht gefunden werden!"
+
+#: ../backend.tables.php:98 ../backend.tables.php:624
+#: ../../include/backend.tables.php:98 ../../include/backend.tables.php:624
+#: ../../templates/the_system/index.php:13
+msgid "Bulk Actions"
+msgstr "Aktion wählen"
+
+#: ../backend.tables.php:102 ../backend.tables.php:628
+#: ../../include/backend.tables.php:102 ../../include/backend.tables.php:628
+#: ../../templates/the_system/index.php:19
+msgid "Apply"
+msgstr "OK"
+
+#: ../backend.tables.php:108 ../backend.tables.php:634
+#: ../../include/backend.tables.php:108 ../../include/backend.tables.php:634
+#: ../../templates/the_system/index.php:25
+msgid "One Message"
+msgstr "Eine Nachricht"
+
+#: ../backend.tables.php:110 ../backend.tables.php:636
+#: ../../include/backend.tables.php:110 ../../include/backend.tables.php:636
+#: ../../templates/the_system/index.php:27
+msgid "Messages"
+msgstr "Nachrichten"
+
+#: ../backend.tables.php:115 ../backend.tables.php:641
+#: ../../include/backend.tables.php:115 ../../include/backend.tables.php:641
+#: ../../templates/the_system/index.php:32
+msgid "Go to the First Page"
+msgstr "Gehe zur ersten Seite"
+
+#: ../backend.tables.php:116 ../backend.tables.php:642
+#: ../../include/backend.tables.php:116 ../../include/backend.tables.php:642
+#: ../../templates/the_system/index.php:33
+msgid "Go to the Previous Page"
+msgstr "Gehe zur vorherigen Seite"
+
+#: ../backend.tables.php:120 ../backend.tables.php:646
+#: ../../include/backend.tables.php:120 ../../include/backend.tables.php:646
+#: ../../templates/the_system/index.php:37
+msgid "Go to the Next Page"
+msgstr "Gehe zur nächsten Seite"
+
+#: ../backend.tables.php:121 ../backend.tables.php:647
+#: ../../include/backend.tables.php:121 ../../include/backend.tables.php:647
+#: ../../templates/the_system/index.php:38
+msgid "Go to the Last Page"
+msgstr "Gehe zur letzten Seite"
+
+#: ../backend.tables.php:143 ../../include/backend.tables.php:143
+#: ../../templates/the_system/index.php:59
+msgid "This folder contains no private messages."
+msgstr "Dieser Ordner enthält keine neuen Nachrichten."
+
+#: ../backend.tables.php:166 ../backend.tables.php:171
+#: ../../include/backend.tables.php:166 ../../include/backend.tables.php:171
+#: ../../templates/the_system/index.php:83
+#: ../../templates/the_system/index.php:89
+msgid "Read"
+msgstr "Lesen"
+
+#: ../backend.tables.php:171 ../../include/backend.tables.php:171
+#: ../../templates/the_system/index.php:89
+msgid "Read this message"
+msgstr "Diese Nachricht lesen"
+
+#: ../backend.tables.php:176 ../../include/backend.tables.php:176
+#: ../../templates/the_system/index.php:95
+msgid "Archive this message"
+msgstr "Diese Nachricht archivieren"
+
+#: ../backend.tables.php:182 ../../include/backend.tables.php:182
+#: ../../templates/the_system/index.php:101
+msgid "Restore this message"
+msgstr "Diese Nachricht wiederherstellen"
+
+#: ../backend.tables.php:182 ../backend.tables.php:585
+#: ../class.dexs_template.php:206 ../class.dexs_template.php:210
+#: ../../include/backend.tables.php:182 ../../include/backend.tables.php:585
+#: ../../include/class.dexs_template.php:206
+#: ../../include/class.dexs_template.php:210
+#: ../../templates/the_system/index.php:101
+#: ../../templates/the_system/message.php:93
+msgid "Restore"
+msgstr "Wiederherstellen"
+
+#: ../backend.tables.php:188 ../../include/backend.tables.php:188
+#: ../../templates/the_system/index.php:107
+msgid "Delete this message"
+msgstr "Diese Nachricht löschen"
+
+#: ../backend.tables.php:188 ../backend.tables.php:593
+#: ../../include/backend.tables.php:188 ../../include/backend.tables.php:593
+#: ../../templates/the_system/index.php:107
+#: ../../templates/the_system/message.php:101
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../backend.tables.php:194 ../../include/backend.tables.php:194
+#: ../../templates/the_system/index.php:113
+msgid "Delete this message permanently"
+msgstr "Diese Nachricht dauerhaft löschen"
+
+#: ../backend.tables.php:194 ../backend.tables.php:597
+#: ../class.dexs_template.php:207 ../../include/backend.tables.php:194
+#: ../../include/backend.tables.php:597
+#: ../../include/class.dexs_template.php:207
+#: ../../templates/the_system/index.php:113
+#: ../../templates/the_system/message.php:105
+msgid "Delete Permanently"
+msgstr "Dauerhaft löschen"
+
+#: ../backend.tables.php:206 ../../include/backend.tables.php:206
+#: ../../templates/the_system/index.php:126
+msgid "Forward this message"
+msgstr "Diese Nachricht weiterleiten"
+
+#: ../backend.tables.php:206 ../backend.tables.php:579
+#: ../../include/backend.tables.php:206 ../../include/backend.tables.php:579
+#: ../../templates/the_system/index.php:126
+#: ../../templates/the_system/message.php:87
+msgid "Forward"
+msgstr "Weiterleiten"
+
+#: ../backend.tables.php:210 ../../include/backend.tables.php:210
+#: ../../templates/the_system/index.php:130
+msgid "Answer to this message"
+msgstr "Diese Nachricht beantworten"
+
+#: ../backend.tables.php:210 ../backend.tables.php:578
+#: ../../include/backend.tables.php:210 ../../include/backend.tables.php:578
+#: ../../templates/the_system/index.php:130
+#: ../../templates/the_system/message.php:86
+msgid "Answer"
+msgstr "Antworten"
+
+#: ../backend.tables.php:235 ../backend.tables.php:501
+#: ../../dexs-pm-admin.php:35 ../../dexs-pm-admin.php:41
+#: ../../dexs-pm-backend.php:127 ../../include/backend.tables.php:235
+#: ../../include/backend.tables.php:501
+#: ../../templates/the_system/message.php:12
+#: ../../templates/the_system/send_form.php:6
+msgid "Error"
+msgstr "Fehler"
+
+#: ../backend.tables.php:245 ../../include/backend.tables.php:245
+#: ../../templates/the_system/send_form.php:22
+msgid "Enter the Recipients here"
+msgstr "Trage hier den Namen des Empfängers ein"
+
+#: ../backend.tables.php:248 ../../include/backend.tables.php:248
+#: ../../templates/the_system/send_form.php:25
+msgid "Type here the names of each recipients."
+msgstr "Trage hier den Namen des Empfängers ein."
+
+#: ../backend.tables.php:260 ../../include/backend.tables.php:260
+#: ../../templates/the_system/send_form.php:37
+msgid "Select a Recipient"
+msgstr "Wähle einen Empfänger aus"
+
+#: ../backend.tables.php:268 ../../include/backend.tables.php:268
+#: ../../templates/the_system/send_form.php:45
+msgid "Select the Recipients here"
+msgstr "Wähle hier einen Empfänger aus"
+
+#: ../backend.tables.php:292 ../../include/backend.tables.php:292
+#: ../../templates/the_system/send_form.php:69
+msgid "Enter the Subject here"
+msgstr "Trage hier den Betreff ein"
+
+#: ../backend.tables.php:305 ../backend.tables.php:335
+#: ../../include/backend.tables.php:305 ../../include/backend.tables.php:335
+#: ../../templates/the_system/send_form.php:118
+msgid "Send Message"
+msgstr "Nachricht senden"
+
+#: ../backend.tables.php:312 ../backend.tables.php:544
+#: ../../include/backend.tables.php:312 ../../include/backend.tables.php:544
+#: ../../templates/the_system/message.php:53
+#: ../../templates/the_system/send_form.php:103
+msgid "Priority"
+msgstr "Priorität"
+
+#: ../backend.tables.php:316 ../backend.tables.php:545
+#: ../../include/backend.tables.php:316 ../../include/backend.tables.php:545
+#: ../../templates/the_system/message.php:54
+#: ../../templates/the_system/send_form.php:107
+msgid "Normal"
+msgstr "Normal"
+
+#: ../backend.tables.php:317 ../backend.tables.php:546
+#: ../../include/backend.tables.php:317 ../../include/backend.tables.php:546
+#: ../../templates/the_system/message.php:55
+#: ../../templates/the_system/send_form.php:108
+msgid "Middle"
+msgstr "Mittel"
+
+#: ../backend.tables.php:318 ../backend.tables.php:547
+#: ../../include/backend.tables.php:318 ../../include/backend.tables.php:547
+#: ../../templates/the_system/message.php:56
+#: ../../templates/the_system/send_form.php:109
+msgid "High"
+msgstr "Hoch"
+
+#: ../backend.tables.php:328 ../../include/backend.tables.php:328
+msgid "Discard Message"
+msgstr "Abbrechen"
+
+#: ../backend.tables.php:346 ../../include/backend.tables.php:346
+msgid "Attachments"
+msgstr "Anhang"
+
+#: ../backend.tables.php:357 ../../include/backend.tables.php:357
+#: ../../templates/the_system/send_form.php:90
+msgid "Max. Size"
+msgstr "Max. Größe"
+
+#: ../backend.tables.php:358 ../../include/backend.tables.php:358
+msgid "Allowed File Extensions"
+msgstr "Erlaubte Dateiendungen"
+
+#: ../backend.tables.php:383 ../../include/backend.tables.php:383
+msgid "Folder Settings"
+msgstr "Ordner Einstellungen"
+
+#: ../backend.tables.php:387 ../backend.tables.php:397
+#: ../backend.tables.php:407 ../backend.tables.php:417
+#: ../../include/backend.tables.php:387 ../../include/backend.tables.php:397
+#: ../../include/backend.tables.php:407 ../../include/backend.tables.php:417
+#: ../../templates/the_system/settings.php:7
+#: ../../templates/the_system/settings.php:17
+#: ../../templates/the_system/settings.php:27
+#: ../../templates/the_system/settings.php:37
+msgid "Messages per Side"
+msgstr "PMs pro Seite"
+
+#: ../backend.tables.php:391 ../backend.tables.php:401
+#: ../backend.tables.php:411 ../backend.tables.php:421
+#: ../../include/backend.tables.php:391 ../../include/backend.tables.php:401
+#: ../../include/backend.tables.php:411 ../../include/backend.tables.php:421
+#: ../../templates/the_system/settings.php:11
+#: ../../templates/the_system/settings.php:21
+#: ../../templates/the_system/settings.php:31
+#: ../../templates/the_system/settings.php:41
+msgid "Choose a number between 5 and 100"
+msgstr "Wähle eine nummer zwischen 5 und 100"
+
+#: ../backend.tables.php:432 ../../include/backend.tables.php:432
+#: ../../templates/the_system/settings.php:47
+msgid "Enable eMail Notifications"
+msgstr "eMail Benachrichtigungen aktivieren"
+
+#: ../backend.tables.php:444 ../../include/backend.tables.php:444
+#: ../../templates/the_system/settings.php:59
+msgid "Receive a email notification on new PMs!"
+msgstr "Erhalte eine eMail Benachrichtigung bei einer neuen PM!"
+
+#: ../backend.tables.php:448 ../../include/backend.tables.php:448
+#: ../../templates/the_system/settings.php:63
+msgid "This feature has been disabled by an administrator!"
+msgstr "Diese Funktion wurde von einem Administrator deaktiviert!"
+
+#: ../backend.tables.php:457 ../../include/backend.tables.php:457
+#: ../../templates/the_system/settings.php:71
+msgid "Statistics"
+msgstr "Statistiken"
+
+#: ../backend.tables.php:465 ../../include/backend.tables.php:465
+msgid "Maximum"
+msgstr "Maximum"
+
+#: ../backend.tables.php:470 ../../include/backend.tables.php:470
+#: ../../templates/the_system/settings.php:84
+msgid "Private Messages by folder"
+msgstr "Private Nachrichten pro Ordner"
+
+#: ../backend.tables.php:511 ../class.dexs_template.php:167
+#: ../class.dexs_template.php:234 ../../include/backend.tables.php:511
+#: ../../include/class.dexs_template.php:167
+#: ../../include/class.dexs_template.php:234
+#: ../../templates/the_system/message.php:20
+msgid "Sender"
+msgstr "Absender"
+
+#: ../backend.tables.php:514 ../backend.tables.php:526
+#: ../../include/backend.tables.php:514 ../../include/backend.tables.php:526
+#: ../../templates/the_system/message.php:23
+#: ../../templates/the_system/message.php:35
+msgid "You"
+msgstr "Du"
+
+#: ../backend.tables.php:516 ../backend.tables.php:528
+#: ../../include/backend.tables.php:516 ../../include/backend.tables.php:528
+#: ../../templates/the_system/message.php:25
+#: ../../templates/the_system/message.php:37
+msgid "Send this user a PM"
+msgstr "Sende diesem Nutzer eine PM"
+
+#: ../backend.tables.php:522 ../class.dexs_template.php:240
+#: ../../include/backend.tables.php:522
+#: ../../include/class.dexs_template.php:240
+#: ../../templates/the_system/message.php:31
+msgid "Recipients"
+msgstr "Empfänger"
+
+#: ../backend.tables.php:540 ../class.dexs_template.php:233
+#: ../class.dexs_template.php:239 ../class.dexs_template.php:245
+#: ../class.dexs_template.php:251 ../../include/backend.tables.php:540
+#: ../../include/class.dexs_template.php:233
+#: ../../include/class.dexs_template.php:239
+#: ../../include/class.dexs_template.php:245
+#: ../../include/class.dexs_template.php:251
+#: ../../templates/the_system/message.php:49
+msgid "Subject"
+msgstr "Betreff"
+
+#: ../backend.tables.php:553 ../../include/backend.tables.php:553
+#: ../../templates/the_system/message.php:62
+msgid "Message Info"
+msgstr "Informationen"
+
+#: ../backend.tables.php:556 ../../include/backend.tables.php:556
+#: ../../templates/the_system/message.php:65
+msgid "Attachment"
+msgstr "Anhang"
+
+#: ../backend.tables.php:557 ../../include/backend.tables.php:557
+#: ../../templates/the_system/message.php:66
+msgid "No Attachments!"
+msgstr "Keine Anhänge vorhanden!"
+
+#: ../backend.tables.php:563 ../../include/backend.tables.php:563
+#: ../../templates/the_system/message.php:72
+msgid "PM Date"
+msgstr "Absendedatum"
+
+#: ../backend.tables.php:570 ../../include/backend.tables.php:570
+msgid "Message"
+msgstr "Nachricht"
+
+#: ../backend.tables.php:605 ../../include/backend.tables.php:605
+msgid ""
+"The attachment was renamed for safety reasons, so don't wonder if you "
+"download the file."
+msgstr "Der Anhang wurde aus Sicherheitsgründen umbenannt."
+
+#: ../backend.tables.php:606 ../../include/backend.tables.php:606
+msgid "The new name of the same file is:"
+msgstr "Der neue Name der selben Datei lautet:"
+
+#: ../class.dexs_actions.php:147 ../../include/class.dexs_actions.php:147
+msgid "This message does not exist or is not meant for you!"
+msgstr "Diese Nachricht existiert nicht oder ist nicht für Dich bestimmt!"
+
+#: ../class.dexs_actions.php:246 ../class.dexs_actions.php:252
+#: ../class.dexs_actions.php:341 ../../include/class.dexs_actions.php:246
+#: ../../include/class.dexs_actions.php:252
+#: ../../include/class.dexs_actions.php:341
+msgid "The message was not found! Please try again."
+msgstr "Die Nachricht konnte nicht gefunden werden!"
+
+#: ../class.dexs_actions.php:257 ../class.dexs_actions.php:296
+#: ../../include/class.dexs_actions.php:257
+#: ../../include/class.dexs_actions.php:296
+msgid "The action can not be performed! Please try again."
+msgstr "Die Aktion konnte nicht durchgeführt werden."
+
+#: ../class.dexs_actions.php:389 ../../include/class.dexs_actions.php:389
+msgid "Original Message:"
+msgstr "Originale Nachricht:"
+
+#: ../class.dexs_actions.php:421 ../../include/class.dexs_actions.php:421
+msgid "An error occurred, please contact an administrator."
+msgstr "Ein Fehler trat auf, bitte kontaktiere einen Administrator."
+
+#: ../class.dexs_actions.php:424 ../../include/class.dexs_actions.php:424
+msgid "You do not have the permission to send a private message."
+msgstr "Du hast nicht die Berechtigung eine Private Nachricht zu verschicken."
+
+#: ../class.dexs_actions.php:428 ../../include/class.dexs_actions.php:428
+msgid ""
+"Limit exceeded! You must delete some private messages to send further ones."
+msgstr ""
+"Limit überschritten. Du must einige Nachrichten löschen um weitere versenden "
+"zu können."
+
+#: ../class.dexs_actions.php:459 ../../include/class.dexs_actions.php:459
+msgid "No recipients specified! Please enter at least one recipient."
+msgstr "Keine Empfänger definiert! Bitte trage mind. einen Empfänger ein."
+
+#: ../class.dexs_actions.php:462 ../../include/class.dexs_actions.php:462
+msgid "No subject specified! Please enter a subject."
+msgstr "Keinen Betreff definiert! Bitte trage einen Betreff ein."
+
+#: ../class.dexs_actions.php:465 ../../include/class.dexs_actions.php:465
+msgid "No message specified! Please enter a message"
+msgstr "Keine Nachricht geschrieben! Bitte schreibe eine Nachricht."
+
+#: ../class.dexs_actions.php:473 ../class.dexs_actions.php:534
+#: ../../include/class.dexs_actions.php:473
+#: ../../include/class.dexs_actions.php:534
+msgid ""
+"An unknown error appeared: The upload of your file failed! Please try again."
+msgstr ""
+"Ein unbekannter Fehler trat auf: Der Upload der Datei schlug fehl! Bitte "
+"probier es erneut."
+
+#: ../class.dexs_actions.php:476 ../../include/class.dexs_actions.php:476
+msgid ""
+"The file extension is not allowed! Please use an allowed file extension."
+msgstr ""
+"Die Dateiendung ist nicht erlaubt! Bitte nutze eine erlaubte Dateiendung."
+
+#: ../class.dexs_actions.php:479 ../../include/class.dexs_actions.php:479
+msgid ""
+"The file is too large. Pack the file in an archive to reduce the file size."
+msgstr ""
+"Die Datei ist zu groß. Archiviere (zippe) die Datei um die Größe zu "
+"verringern."
+
+#: ../class.dexs_pmsystem.php:385 ../../include/class.dexs_pmsystem.php:385
+msgid ""
+"The eMail address for the Demo Mail is invalid! Please enter a valid eMail "
+"address!"
+msgstr ""
+"Die eMail Adresse für die Demo eMail ist ungültig. Bitte trage eine gültige "
+"eMail Adresse ein!"
+
+#: ../class.dexs_pmsystem.php:407 ../../include/class.dexs_pmsystem.php:407
+msgid "The private message could not be found.!"
+msgstr "Die Private Nachricht konnte nicht gefunden werden!"
+
+#: ../class.dexs_pmsystem.php:511 ../../include/class.dexs_pmsystem.php:511
+msgid "Unknown Error: The eMail could not be sent!"
+msgstr "Unbekannter Fehler: Die eMail konnte nicht versendet werden!"
+
+#: ../class.dexs_template.php:151 ../class.dexs_template.php:173
+#: ../../include/class.dexs_template.php:151
+#: ../../include/class.dexs_template.php:173
+msgid "This user has not yet read this message."
+msgstr "Dieser Nutzer hat die Nachricht noch nicht gelesen!"
+
+#: ../class.dexs_template.php:153 ../class.dexs_template.php:175
+#: ../../include/class.dexs_template.php:153
+#: ../../include/class.dexs_template.php:175
+msgid "This user has already read this message."
+msgstr "Dieser Nutzer hat die Nachricht bereits gelesen!"
+
+#: ../class.dexs_template.php:196 ../class.dexs_template.php:202
+#: ../../include/class.dexs_template.php:196
+#: ../../include/class.dexs_template.php:202
+msgid "Move to Archive"
+msgstr "In das Archiv legen"
+
+#: ../class.dexs_template.php:197 ../class.dexs_template.php:203
+#: ../class.dexs_template.php:211 ../../include/class.dexs_template.php:197
+#: ../../include/class.dexs_template.php:203
+#: ../../include/class.dexs_template.php:211
+msgid "Move to Trash"
+msgstr "In den Papierkorb legen"
+
+#: ../class.dexs_template.php:198 ../../include/class.dexs_template.php:198
+msgid "Mark as Read"
+msgstr "Als gelesen markieren"
+
+#: ../class.dexs_template.php:199 ../../include/class.dexs_template.php:199
+msgid "Mark as Unread"
+msgstr "Als ungelesen markieren"
+
+#: ../class.dexs_template.php:235 ../class.dexs_template.php:241
+#: ../class.dexs_template.php:247 ../class.dexs_template.php:253
+#: ../../include/class.dexs_template.php:235
+#: ../../include/class.dexs_template.php:241
+#: ../../include/class.dexs_template.php:247
+#: ../../include/class.dexs_template.php:253
+msgid "Excerpt"
+msgstr "Auszug"
+
+#: ../class.dexs_template.php:236 ../class.dexs_template.php:242
+#: ../class.dexs_template.php:248 ../class.dexs_template.php:254
+#: ../../include/class.dexs_template.php:236
+#: ../../include/class.dexs_template.php:242
+#: ../../include/class.dexs_template.php:248
+#: ../../include/class.dexs_template.php:254
+msgid "Date"
+msgstr "Datum"
+
+#: ../class.dexs_template.php:246 ../class.dexs_template.php:252
+#: ../../include/class.dexs_template.php:246
+#: ../../include/class.dexs_template.php:252
+msgid "Users"
+msgstr "Nutzer"
+
+#: ../upgrade.batch10s.php:36 ../../include/upgrade.batch10s.php:36
+msgid "The database table for our Dexs PM System is deprecated."
+msgstr "Die Datenbank Tabelle unseres Dexs PM Systems ist veraltet."
+
+#: ../upgrade.batch10s.php:36 ../../include/upgrade.batch10s.php:36
+msgid "Please click here"
+msgstr "Bitte klick hier"
+
+#: ../upgrade.batch10s.php:36 ../../include/upgrade.batch10s.php:36
+msgid "to go to the upgrade process."
+msgstr "um zur Upgrade Seite zu gelanden."
+
+#: ../upgrade.batch10s.php:148 ../../include/upgrade.batch10s.php:148
+msgid "Upgrade Dexs PM System to Version "
+msgstr "Upgrade des Dexs PM Systems auf die Version"
+
+#: ../upgrade.batch10s.php:151 ../../include/upgrade.batch10s.php:151
+msgid "Convert Private Messages"
+msgstr "Private Nachrichten konvertieren"
+
+#: ../upgrade.batch10s.php:154 ../../include/upgrade.batch10s.php:154
+msgid "We found"
+msgstr "Wir haben"
+
+#: ../upgrade.batch10s.php:154 ../../include/upgrade.batch10s.php:154
+msgid "one message"
+msgstr "eine Nachricht"
+
+#: ../upgrade.batch10s.php:154 ../../include/upgrade.batch10s.php:154
+msgid "messages"
+msgstr "Nachrichten"
+
+#: ../upgrade.batch10s.php:154 ../../include/upgrade.batch10s.php:154
+msgid "in the old deprecated database table."
+msgstr "in der alten Datenbank Tabelle gefunden."
+
+#: ../upgrade.batch10s.php:161 ../../include/upgrade.batch10s.php:161
+msgid "You have no private messages!"
+msgstr "Du hast keine Privaten Nachrichten!"
+
+#: ../upgrade.batch10s.php:167 ../../include/upgrade.batch10s.php:167
+msgid "What will happen?"
+msgstr "Was wird passieren?"
+
+#: ../upgrade.batch10s.php:170 ../../include/upgrade.batch10s.php:170
+msgid ""
+"All entries in the old database table will be checked, convert and copied "
+"into the new database table."
+msgstr ""
+"Alle Einträge in der alten Datenbanktabelle werden geprüft, konvertiert und "
+"in die neue Datenbanktabelle eingefügt."
+
+#: ../upgrade.batch10s.php:171 ../../include/upgrade.batch10s.php:171
+msgid "But only if you have activate the checkbox above!"
+msgstr "Aber nur dann, wenn Du die Checkbox oberhalb aktiviert hast!"
+
+#: ../upgrade.batch10s.php:173 ../../include/upgrade.batch10s.php:173
+msgid "The old database table will be deleted."
+msgstr "Die alte Datenbanktabelle wird gelöscht."
+
+#: ../upgrade.batch10s.php:180 ../../include/upgrade.batch10s.php:180
+msgid "Upgrade Now"
+msgstr "Jetzt Upgraden"
+
+#: ../../dexs-pm-admin.php:12
+msgid "Permission Settings"
+msgstr "Berechtigungen"
+
+#: ../../dexs-pm-admin.php:13
+msgid "eMail Notification"
+msgstr "eMail Benachrichtigungen"
+
+#: ../../dexs-pm-admin.php:20 ../../dexs-pm-backend.php:115
+msgid "<b>Congratulation:</b> The settings have been successfully saved!"
+msgstr ""
+"<b>Herzlichen Glückwunsch:</b> Die Einstellungen wurden erfolgreich "
+"gespeichert!"
+
+#: ../../dexs-pm-admin.php:24
+msgid "<b>Congratulation:</b> The settings have been successfully reset!"
+msgstr ""
+"<b>Herzlichen Glückwunsch:</b> Die Einstellungen wurden erfolgreich "
+"zurückgesetzt!"
+
+#: ../../dexs-pm-admin.php:28
+msgid ""
+"<b>Congratulation:</b> The test notification eMail was successfully sent!"
+msgstr ""
+"<b>Herzlichen Glückwunsch:</b> Die Test eMail wurde erfolgreich verschickt!"
+
+#: ../../dexs-pm-admin.php:41
+msgid ""
+"You haven't create a (published) page with the shortcode <code>[pm_system]</"
+"code> and that means you cannot use the front-End PM Interface."
+msgstr ""
+"Du hast noch keine (veröffentlichte) Seite mit dem Shortcode <code>"
+"[pm_system]</code> erstellt und das bedeutet, dass Du das Frontend PM "
+"Interface noch nicht nutzen kannst."
+
+#: ../../dexs-pm-backend.php:24 ../../dexs-pm-system.php:341
+msgid "Send PM"
+msgstr "PM Senden"
+
+#: ../../dexs-pm-backend.php:29 ../../dexs-pm-backend.php:65
+#: ../../dexs-pm-backend.php:96 ../../templates/the_system/header.php:45
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: ../../dexs-pm-backend.php:38 ../../templates/the_system/header.php:30
+msgid "Write a new PM"
+msgstr "Schreibe eine neue Nachricht"
+
+#: ../../dexs-pm-backend.php:92
+msgid "Send"
+msgstr "Absenden"
+
+#: ../../dexs-pm-backend.php:121
+msgid "<b>Congratulation:</b> The private message was sent successfully!"
+msgstr ""
+"<b>Herzlichen Glückwunsch:</b> Die Private Nachricht wurde erfolgreich "
+"verschickt!"
+
+#: ../../dexs-pm-system.php:122
+msgid "Dexs PM System - Error:"
+msgstr "Dexs PM System - Fehler:"
+
+#: ../../dexs-pm-system.php:217 ../../dexs-pm-system.php:229
+#: ../../dexs-pm-system.php:262
+msgid "An unknown Error occurred! The settings couldn't be saved."
+msgstr ""
+"Ein unbekannter Fehler trat auf! Die Einstellungen konnten nicht gespeichert "
+"werden."
+
+#: ../../dexs-pm-system.php:223 ../../dexs-pm-system.php:266
+msgid "An unknown Error occurred! The settings couldn't be reset."
+msgstr ""
+"Ein unbekannter Fehler trat auf! Die Einstellungen konnten nicht "
+"zurückgesetzt werden."
+
+#: ../../dexs-pm-system.php:233
+msgid "An unknown Error occurred! The test eMail couldn't be sent."
+msgstr ""
+"Ein unbekannter Fehler trat auf! Die Test eMail konnte nicht verschickt "
+"werden."
+
+#: ../../dexs-pm-system.php:252
+msgid "An unknown Error occurred!"
+msgstr "Ein unbekannter Fehler trat auf!"
+
+#: ../../dexs-pm-system.php:285
+msgid "An unknown Error occurred! The transferred datas are faulty."
+msgstr ""
+"Ein unbekannter Fehler trat auf! Die abgeschickten Datein sind fehlerhaft."
+
+#: ../../dexs-pm-system.php:288
+msgid "An unknown Error occurred! You have no message selected."
+msgstr "Ein unbekannter Fehler trat auf! Du hast keine Nachricht ausgewählt."
+
+#: ../../dexs-pm-system.php:342
+msgid "PM Outbox"
+msgstr "Postausgan"
+
+#: ../../dexs-pm-system.php:343
+msgid "PM Trash"
+msgstr "Papierkorb"
+
+#: ../../dexs-pm-system.php:344
+msgid "PM Archive"
+msgstr "Archiv"
+
+#: ../../dexs-pm-system.php:345
+msgid "PM Settings"
+msgstr "Einstellungen"
+
+#: ../../dexs-pm-system.php:366
+msgid "new Messages"
+msgstr "neue Nachrichten"
+
+#: ../../dexs-pm-system.php:368
+msgid "1 new Message"
+msgstr "1 neue Nachricht"
+
+#: ../../dexs-pm-system.php:422
+msgid "Write a new Message"
+msgstr "Schreibe eine neue Nachricht"
+
+#: ../../dexs-pm-system.php:438
+msgid "Folder: Outbox"
+msgstr "Postausgang"
+
+#: ../../dexs-pm-system.php:447
+msgid "Folder: Archive"
+msgstr "Archiv"
+
+#: ../../dexs-pm-system.php:456
+msgid "Folder: Trash"
+msgstr "Papierkorb"
+
+#: ../../dexs-pm-system.php:522
+msgid "Username"
+msgstr "Benutzername"
+
+#: ../../dexs-pm-system.php:523
+msgid "Password"
+msgstr "Passwort"
+
+#: ../../dexs-pm-system.php:524
+msgid "Remember Me"
+msgstr "Login speichern"
+
+#: ../../dexs-pm-system.php:525
+msgid "Log In"
+msgstr "Anmelden"
+
+#: ../../dexs-pm-system.php:535
+msgid "You must be logged in to use this function!"
+msgstr "Du must eingeloggt sein um diese Funktion nutzen zu können!"
+
+#: ../../templates/the_system/send_form.php:91
+msgid "Allowed Formats"
+msgstr "Erlaubte Formate"

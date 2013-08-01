@@ -1,13 +1,11 @@
 /*
-	Copyight © 2012 && Written by SamBrishesWeb
-	http://www.sambrishes.net/wordpress
-	
-	Written 4 our WordPress Plugin: Dexs PM System
-	http://www.sambrishes.net/wordpress/dexs-pm-system
-	
-	Free to Use and Edit, also without our Copyright notice
-*/
-
+ *		DROPDOWN RECIPIENT-FIELD
+ *		Coded by: SamBrishes (PYTES)
+ *
+ *		My knowledge about JavaScript are unfortunately low.
+ *		But .... it works ... ^.^
+ */
+		
 	function get_recipient(value){
 		var therecipient = value;
 		var splitid = therecipient.split(",");
@@ -27,7 +25,7 @@
 		/* CREATE HIDDEN INPUT 4 POST */
 		var forminput = document.createElement("INPUT");
 		forminput.setAttribute("type", "hidden");
-		forminput.setAttribute("name", "the_recipient_ids[]");
+		forminput.setAttribute("name", "recipients[]");
 		forminput.setAttribute("value", splitid[0]);
 		forminput.setAttribute("id", "theuser_" + splitid[0]);
 		document.getElementById("fields").appendChild(forminput);

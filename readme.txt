@@ -29,6 +29,8 @@ So if you have any ideas or suggestions for improvement then please write us and
 Thanks for your support and for 410 Downloads and 2 x 5-stars <3.
 
 = Support =
+So you can contact us.
+
 *	Twitter: <a href="http://www.twitter.com/PytesDev">@PytesDev</a>
 * 	FaceBook: *Coming Coon*
 *	eMail: sambrishes@gmx.net
@@ -114,6 +116,8 @@ Thanks for your support and for 410 Downloads and 2 x 5-stars <3.
 
 == Frequently Asked Questions ==
 
+Coming Soon
+
 = Upgrade from v. 0.9.1 BETA to v. 1.0.0 and above =
 A upgrade to the new Version (1.0.0 RC.1) is easily and completed in a few seconds.
 
@@ -123,34 +127,6 @@ A upgrade to the new Version (1.0.0 RC.1) is easily and completed in a few secon
 5. 	Click on the big button "UPGRADE NOW" an wait a few seconds.
 6. 	Finished! :)
 
-= Count PMs =
-Within a function, you must set the following variable in the global:
-`funtion myfunction(){
-	global $dexsPM;
-}´
-
-To count PMs call the function count_messages:
-‘$dexsPMA->count_messages($type, $echo);’
-
-Instead of $type use "inbox", "outbox", "trash", "archive", "new" or "all".
-If you set the parameter "all" will the result return as an array otherwise it will return as a string.
-
-The second parameter is optional and indicates whether the result should be displayed or not.
-True = Displayed the result (unless the first parameter is NOT "all")
-False (Default) = The result return as string (or as an array).
-
-= Count PMs (deprecated) =
-The old way to count messages:
-‘count_pm($user, $type, $echo);’
-
-The $user parameter is deprecated, so type in NULL or "".
-
-Instead of $type use "inbox", "outbox", "trash", "archive", "new" or "all".
-If you set the parameter "all" will the result return as an array otherwise it will return as a string.
-
-The second parameter is optional and indicates whether the result should be displayed or not.
-True = Displayed the result (unless the first parameter is NOT "all")
-False (Default) = The result return as string (or as an array).
 
 == Upgrade Notice ==
 

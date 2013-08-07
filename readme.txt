@@ -16,12 +16,10 @@ Hello and Welcome!
 Thanks for 410 Downloads. We <3 you.
 
 = Stable Version =
-
 According to relevant tests should this version be bug-free. The PHP Parser Error could be fixed and otherwise we (and you) could find any other Fatal Errors. 
 But if you find still errors, please report it here (in the support forum) or over another contact option below! Thank you! :3 
 
 = What is the Dexs PM System? =
-
 A extended Private Message System for your WordPress Community, that can be used on the back-End and also on the front-End. 
 With an PM Widget, an eMail Notification System, a Toolbar Interface, maaaany Settings and many more features.
 
@@ -31,7 +29,6 @@ So if you have any ideas or suggestions for improvement then please write us and
 Thanks for your support and for 410 Downloads and 2 x 5-stars <3.
 
 = Support =
-
 *	Twitter: <a href="http://www.twitter.com/PytesDev">@PytesDev</a>
 * 	FaceBook: *Coming Coon*
 *	eMail: sambrishes@gmx.net
@@ -128,9 +125,9 @@ A upgrade to the new Version (1.0.0 RC.1) is easily and completed in a few secon
 
 = Count PMs =
 Within a function, you must set the following variable in the global:
-‘funtion myfunction(){
+`funtion myfunction(){
 	global $dexsPM;
-}’
+}´
 
 To count PMs call the function count_messages:
 ‘$dexsPMA->count_messages($type, $echo);’

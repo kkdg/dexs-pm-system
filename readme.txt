@@ -13,7 +13,7 @@ A extended Private Message System for your WordPress Community, that can be used
 == Description ==
 
 Hello and Welcome!
-Thanks for 410 Downloads. We <3 you.
+Thanks for your support and for 410 Downloads and 2 x 5-stars <3.
 
 = Stable Version =
 According to relevant tests should this version be bug-free. The PHP Parser Error could be fixed and otherwise we (and you) could find any other Fatal Errors. 
@@ -25,8 +25,6 @@ With an PM Widget, an eMail Notification System, a Toolbar Interface, maaaany Se
 
 We want to expand this plugin with more and more features and options, so we have already ideas for the next version and some of them are from you.
 So if you have any ideas or suggestions for improvement then please write us and we will maybe integrate your features and idea in one of the following versions.
-
-Thanks for your support and for 410 Downloads and 2 x 5-stars <3.
 
 = Support =
 So you can contact us.

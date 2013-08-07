@@ -32,7 +32,7 @@
 		if(empty($db)){
 			return false;
 		}
-		return new WP_Error('pmdb_deprecated', __("The database table for our Dexs PM System is deprecated.")." <a href='options-general.php?page=pm_config'>".__("Please click here", "dexs-pm")."</a> ".__("to go to the upgrade process.", "dexs-pm"));
+		return new WP_Error('pmdb_deprecated', __("The database table for our Dexs PM System is deprecated.")." <a href='./options-general.php?page=pm_config'>".__("Please click here", "dexs-pm")."</a> ".__("to go to the upgrade process.", "dexs-pm"));
 	}
 	
 	
@@ -223,7 +223,6 @@
 	 */
 	function count_pm($user_id = "", $count_this, $echo = false){
 		global $dexsPMA;
-		_deprecated_function( __FUNCTION__, '0.9.1 Beta', '$dexsPMA->count_messages()');
 		
 		return $dexsPMA->count_messages($count_this, $echo);
 	}

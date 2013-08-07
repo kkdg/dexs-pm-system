@@ -138,15 +138,17 @@
 			if($folder == 0){
 			
 				$pm_meta = maybe_unserialize($message->pm_meta);
-				$user = $wpdb->get_results("SELECT display_name FROM $wpdb->users WHERE ID = '".$pm_meta['sender']['id']."'");				
-				print($user[0]->display_name); return;
+				$user = $wpdb->get_results("SELECT display_name FROM $wpdb->users WHERE ID = '".$pm_meta['sender']['id']."'");
+				$user = $user[0];
+				print($user->display_name); return;
 				
 			} else if($folder == 1){
 			
 				$pm_recipients = maybe_unserialize($message->pm_recipients);				
 				foreach($pm_recipients AS $user_id => $rec){
 					$user = $wpdb->get_results("SELECT display_name FROM $wpdb->users WHERE ID = '".$user_id."'");
-					$user_name = $user[0]->display_name;
+					$user = $user[0];
+					$user_name = $user->display_name;
 					if(!$rec['read']){ 
 						$read = "(<a href='#' title='".__("This user has not yet read this message.", "dexs-pm")."'>✘</a>)"; 
 					} else { 
@@ -163,12 +165,14 @@
 				$pm_recipients = maybe_unserialize($message->pm_recipients);
 				
 				$user = $wpdb->get_results("SELECT display_name FROM $wpdb->users WHERE ID = '".$pm_meta['sender']['id']."'");
+				$user = $user[0];
 				
-				print("<b>".$user[0]->display_name."</b> (".__("Sender", "dexs-pm").")<br>");
+				print("<b>".$user->display_name."</b> (".__("Sender", "dexs-pm").")<br>");
 				
 				foreach($pm_recipients AS $user_id => $rec){
 					$user = $wpdb->get_results("SELECT display_name FROM $wpdb->users WHERE ID = '".$user_id."'");
-					$user_name = $user[0]->display_name;
+					$user = $user[0];
+					$user_name = $user->display_name;
 					if(!$rec['read']){ 
 						$read = "(<a href='#' title='".__("This user has not yet read this message.", "dexs-pm")."'>✘</a>)"; 
 					} else { 
@@ -367,11 +371,11 @@
 		 *	@return string / print
 		 */
 		function pm_attachment_url($echo = false){
-			
-			if(file_exists(wp_upload_dir()['basedir']."/dexspm_files")){
-				$upload_url = wp_upload_dir()['baseurl']."/dexspm_files";
+			$basedir = wp_upload_dir();
+			if(file_exists($basedir['basedir']."/dexspm_files")){
+				$upload_url = $basedir['baseurl']."/dexspm_files";
 			} else {
-				$upload_url = wp_upload_dir()['baseurl'];
+				$upload_url = $basedir['baseurl'];
 			}			
 			
 			if($echo){

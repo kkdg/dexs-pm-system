@@ -31,15 +31,21 @@
 		);
 		private $set_tab_defaults = array(
 			"settings" => array(
-				'list_style'		=> '1',
 				'email_note'		=> '0',
 				'show_copy'			=> '1',
 				'standard_role'		=> 'subscriber',
+				'use_archive'		=> '1',
+				'use_trash'			=> '1',
+				'list_style'		=> '1',
+				'use_attachments'	=> '1',
+				'attachment_type'	=> '0',
 				'attachment_size'	=> '1024',
 				'attachment_formats' => '.jpeg, .jpg, .gif, .png, .tar, .zip, .7z, .rar',
+				'use_backend'		=> '1',
 				'backend_style'		=> '1',
 				'backend_toolbar'	=> '1',
 				'backend_navi'		=> '1',
+				'use_frontend'		=> '1',
 				'frontend_style' 	=> '0',
 				'frontend_theme' 	=> 'the_system'
 			),
@@ -166,15 +172,21 @@
 						}
 					}
 					$insert = array(
-						'list_style'		=> $post['list_style'],
 						'email_note'		=> $post['email_note'],
 						'show_copy'			=> $post['show_copy'],
 						'standard_role'		=> $post['standard_role'],
+						'use_archive'		=> "1",
+						'use_trash'			=> "1",
+						'list_style'		=> $post['list_style'],
+						'use_attachments'	=> "1",
+						'attachment_type'	=> "0",
 						'attachment_size'	=> $post['attachment_size'],
 						'attachment_formats' => $post['attachment_formats'],
+						'use_backend'		=> "1",
 						'backend_style'		=> $post['backend_style'],
 						'backend_toolbar'	=> $post['backend_toolbar'],
 						'backend_navi'		=> $post['backend_navi'],
+						'use_frontend'		=> "1",
 						'frontend_style' 	=> $post['frontend_style'],
 						'frontend_theme' 	=> $post['frontend_theme']
 					);

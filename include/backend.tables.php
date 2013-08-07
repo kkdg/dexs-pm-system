@@ -75,10 +75,11 @@
 				$error = __("The message could not be found!", "dexs-pm");
 			}
 			
-			if(file_exists(wp_upload_dir()['basedir']."/dexspm_files")){
-				$upload_url = wp_upload_dir()['baseurl']."/dexspm_files";
+			$basedir = wp_upload_dir();
+			if(file_exists($basedir['basedir']."/dexspm_files")){
+				$upload_url = $basedir['baseurl']."/dexspm_files";
 			} else {
-				$upload_url = wp_upload_dir()['baseurl'];
+				$upload_url = $basedir['baseurl'];
 			}
 		}
 		
@@ -512,7 +513,7 @@
 												<?php if($read_pm->pm_sender == $user){ ?>
 													<?php _e("You", "dexs-pm"); echo " (".get_userdata($read_pm->pm_sender)->display_name.")"; ?>
 												<?php } else { ?>
-													<?php echo "<a href='$spage&table=5&rec=".$read_pm->pm_sender."' title='".__("Send this user a PM", "dexs-pm")."'>".get_userdata($read_pm->pm_sender)->display_name."</a>"; ?>
+													<?php echo "<a href='$spage&folder=5&rec=".$read_pm->pm_sender."' title='".__("Send this user a PM", "dexs-pm")."'>".get_userdata($read_pm->pm_sender)->display_name."</a>"; ?>
 												<?php } ?>
 											</td>
 										</tr>
@@ -524,7 +525,7 @@
 													<?php if($uid == $user){ ?>
 														<?php $out[] = __("You", "dexs-pm")." (".get_userdata($uid)->display_name.")"; ?>
 													<?php } else { ?>
-														<?php $out[] = "<a href='$spage&table=5&rec=$uid' title='".__("Send this user a PM", "dexs-pm")."'>".get_userdata($uid)->display_name."</a>"; ?>
+														<?php $out[] = "<a href='$spage&folder=5&rec=$uid' title='".__("Send this user a PM", "dexs-pm")."'>".get_userdata($uid)->display_name."</a>"; ?>
 													<?php } ?>
 												<?php } ?>
 												<?php echo implode(", ", $out); ?>
@@ -640,7 +641,7 @@
 						<a class="first-page <?php if($offset == 1){ echo "disabled"; } ?>" title="<?php _e("Go to the First Page", "dexs-pm");?>" <?php if($offset >= ceil($counter/$max_view)){ echo "href='$use_page&row=1'"; } ?> style="cursor:pointer;">&laquo;</a>
 						<a class="prev-page <?php if($offset == 1){ echo "disabled"; } ?>" title="<?php _e("Go to the Previous Page", "dexs-pm");?>" <?php if($offset >= ceil($counter/$max_view)){ echo "href='$use_page&row=".($offset-1)."'"; } ?> style="cursor:pointer;">&lsaquo;</a>
 							<span class="paging-input">
-								<?php echo $offset; ?> of <?php echo ceil($counter/$max_view); ?>
+								<?php echo $offset; ?> of <?php echo (ceil($counter/$max_view) == 0)? "1" : ceil($counter/$max_view); ?>
 							</span>
 						<a class="next-page <?php if($offset >= ceil($counter/$max_view)){ echo "disabled"; } ?>" title="<?php _e("Go to the Next Page", "dexs-pm");?>" <?php if($offset < ceil($counter/$max_view)){ echo "href='$use_page&row=".($offset+1)."'"; } ?> style="cursor:pointer;">&rsaquo;</a>
 						<a class="last-page <?php if($offset >= ceil($counter/$max_view)){ echo "disabled"; } ?>" title="<?php _e("Go to the Last Page", "dexs-pm");?>" <?php if($offset < ceil($counter/$max_view)){ echo "href='$use_page&row=".ceil($counter/$max_view)."'"; } ?> style="cursor:pointer;">&raquo;</a>

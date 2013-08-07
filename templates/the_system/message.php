@@ -22,7 +22,7 @@
 								<?php if($read_pm->pm_sender == $this->cur_user){ ?>
 									<?php _e("You", "dexs-pm"); echo " (".get_userdata($read_pm->pm_sender)->display_name.")"; ?>
 								<?php } else { ?>
-									<?php echo "<a href='".$dexsPMT->get_folder_url()."&table=5&rec=".$read_pm->pm_sender."' title='".__("Send this user a PM", "dexs-pm")."'>".get_userdata($read_pm->pm_sender)->display_name."</a>"; ?>
+									<?php echo "<a href='".$dexsPMT->get_folder_url()."&folder=5&rec=".$read_pm->pm_sender."' title='".__("Send this user a PM", "dexs-pm")."'>".get_userdata($read_pm->pm_sender)->display_name."</a>"; ?>
 								<?php } ?>
 							</td>
 						</tr>
@@ -34,7 +34,7 @@
 									<?php if($uid == $this->cur_user){ ?>
 										<?php $out[] = _e("You", "dexs-pm"); echo " (".get_userdata($uid)->display_name.")"; ?>
 									<?php } else { ?>
-										<?php $out[] = "<a href='".$dexsPMT->get_folder_url()."&table=5&rec=$uid' title='".__("Send this user a PM", "dexs-pm")."'>".get_userdata($uid)->display_name."</a>"; ?>
+										<?php $out[] = "<a href='".$dexsPMT->get_folder_url()."&folder=5&rec=$uid' title='".__("Send this user a PM", "dexs-pm")."'>".get_userdata($uid)->display_name."</a>"; ?>
 									<?php } ?>
 								<?php } ?>
 								<?php echo implode(", ", $out); ?>

@@ -292,8 +292,9 @@
 			
 			foreach($pm_id AS $pm){
 				$message = $wpdb->get_results("SELECT pm_meta, pm_recipients, pm_send FROM ".$wpdb->prefix."".parent::$this->pm_table." WHERE pm_id = '$pm'");
-				$pm_meta = maybe_unserialize($message[0]->pm_meta);
-				$pm_rec_meta = maybe_unserialize($message[0]->pm_recipients);
+				$messageme = $message[0];
+				$pm_meta = maybe_unserialize($messageme->pm_meta);
+				$pm_rec_meta = maybe_unserialize($messageme->pm_recipients);
 				
 				if($action == 3){
 					/* DELETE THE MESSAGE */
@@ -335,7 +336,7 @@
 						$wpdb->prefix."".parent::$this->pm_table, 
 						array( 
 							'pm_meta' => maybe_serialize($pm_meta),
-							'pm_send' => $message[0]->pm_send
+							'pm_send' => $messageme->pm_send
 						), 
 						array('pm_id' => $pm)
 					);
@@ -359,7 +360,7 @@
 						$wpdb->prefix."".parent::$this->pm_table, 
 						array(
 							'pm_recipients' => maybe_serialize($pm_rec_meta),
-							'pm_send' => $message[0]->pm_send
+							'pm_send' => $messageme->pm_send
 						), 
 						array('pm_id' => $pm)
 					);
@@ -384,7 +385,8 @@
 			get_currentuserinfo();
 		
 			$maxPM = parent::check_permissions("max_messages");
-			$count = $this->count_messages("6", false)['all'];
+			$count = $this->count_messages("6", false);
+			$count = $count['all'];
 			
 			if($maxPM == "-1" || ($maxPM != "0" && $maxPM > $count)){
 				
@@ -548,12 +550,13 @@
 			
 			/* FILE UPLOAD && DB INSERT */
 			if($meta['file']){
-				if(!file_exists(wp_upload_dir()['basedir']."/dexspm_files")){
-					if(!$upload_url = mkdir(wp_upload_dir()['basedir']."/dexspm_files", 644)){
-						$upload_url = wp_upload_dir()['basedir'];
+				$basedir = wp_upload_dir();
+				if(!file_exists($basedir['basedir']."/dexspm_files")){
+					if(!$upload_url = mkdir($basedir['basedir']."/dexspm_files", 644)){
+						$upload_url = $basedir['basedir'];
 					}						
 				} else {
-					$upload_url = wp_upload_dir()['basedir']."/dexspm_files";
+					$upload_url = $basedir['basedir']."/dexspm_files";
 				}
 			
 				if(!move_uploaded_file($_FILES['attachment']['tmp_name'], $upload_url."/".$_FILES['attachment']['name'])){
@@ -577,7 +580,8 @@
 			} else {
 				$getpm = $wpdb->get_results("SELECT pm_id FROM ".($wpdb->prefix."".parent::$this->pm_table)." WHERE 
 											pm_subject = '".$post['subject']."' AND pm_meta = '".maybe_serialize($meta)."' AND pm_send = '".$post['send_date']."'");
-				$getpmid = $getpm[0]->pm_id;
+				$getpmmes = $getpm[0];
+				$getpmid = $getpmmes->pm_id;
 				
 				if(parent::send_email_note($getpmid)){
 					return true;

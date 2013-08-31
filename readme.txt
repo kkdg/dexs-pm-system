@@ -15,7 +15,7 @@ A extended Private Message System for your WordPress Community, that can be used
 Hello and Welcome!
 Thanks for your support and for 410 Downloads and 2 x 5-stars <3.
 
-= Bugfix #001 =
+= Bugfix #001 = 
 Problem: No header redirect on the frontend!
 Answer: http://wordpress.org/support/topic/frontend-success-message?replies=2
 BugFix: <a href="http://pytes.net/bugfix/dexs-pm-system/1-3-0/dexs-pm-system_bugfix.zip">Download The File</a>

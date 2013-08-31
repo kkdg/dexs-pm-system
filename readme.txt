@@ -15,6 +15,12 @@ A extended Private Message System for your WordPress Community, that can be used
 Hello and Welcome!
 Thanks for your support and for 410 Downloads and 2 x 5-stars <3.
 
+= Bugfix #001 =
+Problem: No header redirect on the frontend!
+Answer: http://wordpress.org/support/topic/frontend-success-message?replies=2
+BugFix: <a href="http://pytes.net/bugfix/dexs-pm-system/1-3-0/dexs-pm-system_bugfix.zip">Download The File</a>
+Thanks to: <a href="http://wordpress.org/support/profile/divyansh2492">divyansh2492</a>
+
 = Stable Version =
 According to relevant tests should this version be bug-free. The PHP Parser Error could be fixed and otherwise we (and you) could find any other Fatal Errors. 
 But if you find still errors, please report it here (in the support forum) or over another contact option below! Thank you! :3 
@@ -119,9 +125,10 @@ Coming Soon
 = Upgrade from v. 0.9.1 BETA to v. 1.0.0 and above =
 A upgrade to the new Version (1.0.0 RC.1) is easily and completed in a few seconds.
 
-2. 	Deactivate the current installed version of our plugin, through the "Plugins" menu in WordPress.
-3. 	FTP: Delete the current folder on your server and upload the new folder (the new version).
-4. 	Activate the Dexs PM System (1.0.0 RC.1 or above) and click on "Please click here" on the red Error message.
+1. 	Deactivate (IMPORTANT: and don't deinstall!) the current installed version of our plugin, through the "Plugins" menu in WordPress.
+2. 	Delete the "dexs-pm-system" folder in the Plugins Directory on your server.
+3.	Download the new version and Unpack it on your server, also in the Plugins Directory.
+4. 	reActivate the Dexs PM System and click on the "Please click here" text in the red Error message.
 5. 	Click on the big button "UPGRADE NOW" an wait a few seconds.
 6. 	Finished! :)
 

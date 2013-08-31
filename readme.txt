@@ -16,10 +16,11 @@ Hello and Welcome!
 Thanks for your support and for 410 Downloads and 2 x 5-stars <3.
 
 = Bugfix #001 = 
-Problem: No header redirect on the frontend!
-Answer: http://wordpress.org/support/topic/frontend-success-message?replies=2
-BugFix: <a href="http://pytes.net/bugfix/dexs-pm-system/1-3-0/dexs-pm-system_bugfix.zip">Download The File</a>
-Thanks to: <a href="http://wordpress.org/support/profile/divyansh2492">divyansh2492</a>
+No header redirect on the frontend!
+
+* Answer: http://wordpress.org/support/topic/frontend-success-message?replies=2
+* BugFix: <a href="http://pytes.net/bugfix/dexs-pm-system/1-3-0/dexs-pm-system_bugfix.zip">Download The File</a>
+* Thanks to: <a href="http://wordpress.org/support/profile/divyansh2492">divyansh2492</a>
 
 = Stable Version =
 According to relevant tests should this version be bug-free. The PHP Parser Error could be fixed and otherwise we (and you) could find any other Fatal Errors. 

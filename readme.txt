@@ -113,7 +113,7 @@ So you can contact us.
 
 = 0.9.1 (B.1) BETA =
 
-*   Attention: First unstable Beta Version
+*   Attention: First unstable Beta Version 
 
 = 0.9.0 (B.0) BETA =
 

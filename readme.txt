@@ -28,11 +28,11 @@ Bug: No header redirect on the frontend! (<a href="http://wordpress.org/support/
 A french translation for our Dexs PM System (v. 1.0.1)
 
 * Download: <a href="http://pytes.net/languages/dexs-pm-system/1-3-0/dexs-pm-system_fr.zip">Main Download</a> 
-* Download: <a href="http://pytes.bplaced.net/files/dexs-pm-system/translations/dexs-pm-system_fr.zipdexs-pm-system_bugfix.zip">Mirror 1 - Download</a>
+* Download: <a href="http://pytes.bplaced.net/files/dexs-pm-system/translations/dexs-pm-system_fr.zip">Mirror 1 - Download</a>
 * Download: <a href="http://plugins.svn.wordpress.org/dexs-pm-system/branches/dexs-pm-system_fr.zip">Mirror 2 - Download</a>
 
 * Thanks To: Drogrin (<a href="https://twitter.com/Drogrrin">@Drogrrin</a>) 
-* Thanks To: Xéfir Destiny (<a href="https://twitter.com/Xefir_Destiny">@Xefir Destiny</a>)
+* Thanks To: Xéfir Destiny (<a href="https://twitter.com/Xefir_Destiny">@Xefir_Destiny</a>)
 * Thanks To: Radio Brony (<a href="https://twitter.com/radiobrony">@radiobrony</a>) - <a href="http://www.radiobrony.fr/">Website</a>
 
 = Stable Version =

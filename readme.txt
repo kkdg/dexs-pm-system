@@ -113,7 +113,7 @@ So you can contact us.
 *   Upgrade: The admin toolbar PM “Interface”
 *   Upgrade: The front-End template system
 *   Upgrade: The front-End design
-*   Upgrade: The “the_system” front-End template
+*   Upgrade: The “the_system” front-End template 
 *   Upgrade: The eMail Notification Mail-Design
 *   Upgrade: The eMail Notification function
 *   Remove: “Help-Tabs”

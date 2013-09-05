@@ -33,7 +33,7 @@ A french translation for our Dexs PM System (v. 1.0.1)
 
 * Thanks To: Drogrin (<a href="https://twitter.com/Drogrrin">@Drogrrin</a>)
 * Thanks To: Xéfir Destiny (<a href="https://twitter.com/Xefir_Destiny">Xefir Destiny</a>)
-* Thanks To: Radio Brony (a href="https://twitter.com/radiobrony">@radiobrony</a>) - <a href="http://www.radiobrony.fr/">Website</a>
+* Thanks To: Radio Brony (<a href="https://twitter.com/radiobrony">@radiobrony</a>) - <a href="http://www.radiobrony.fr/">Website</a>
 
 = Stable Version =
 According to relevant tests should this version be bug-free. The PHP Parser Error could be fixed and otherwise we (and you) could find any other Fatal Errors. 

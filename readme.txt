@@ -31,8 +31,8 @@ A french translation for our Dexs PM System (v. 1.0.1)
 * Download: <a href="http://pytes.bplaced.net/files/dexs-pm-system/translations/dexs-pm-system_fr.zipdexs-pm-system_bugfix.zip">Mirror 1 - Download</a>
 * Download: <a href="http://plugins.svn.wordpress.org/dexs-pm-system/branches/dexs-pm-system_fr.zip">Mirror 2 - Download</a>
 
-* Thanks To: Drogrin (<a href="https://twitter.com/Drogrrin">@Drogrrin</a>)
-* Thanks To: Xéfir Destiny (<a href="https://twitter.com/Xefir_Destiny">Xefir Destiny</a>)
+* Thanks To: Drogrin (<a href="https://twitter.com/Drogrrin">@Drogrrin</a>) 
+* Thanks To: Xéfir Destiny (<a href="https://twitter.com/Xefir_Destiny">@Xefir Destiny</a>)
 * Thanks To: Radio Brony (<a href="https://twitter.com/radiobrony">@radiobrony</a>) - <a href="http://www.radiobrony.fr/">Website</a>
 
 = Stable Version =

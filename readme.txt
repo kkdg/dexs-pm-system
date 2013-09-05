@@ -18,26 +18,22 @@ Thanks for your support and for 410 Downloads and 2 x 5-stars <3.
 = Bugfix #001 = 
 Bug: No header redirect on the frontend! (<a href="http://wordpress.org/support/topic/frontend-success-message">Support Thread</a>)
 
-Bugfix Download:
-* <a href="http://pytes.net/bugfix/dexs-pm-system/1-3-0/dexs-pm-system_bugfix.zip">Download</a>
-* <a href="http://www.pytes.bplaced.net/files/dexs-pm-system/bugfix/dexs-pm-system_bugfix.zip">Mirror 1 - Download</a> 
-* <a href="http://plugins.svn.wordpress.org/dexs-pm-system/branches/dexs-pm-system_bugfix.zip">Mirror 2 - Download</a>
+* BugFix Download: <a href="http://pytes.net/bugfix/dexs-pm-system/1-3-0/dexs-pm-system_bugfix.zip">Download</a>
+* BugFix Download: <a href="http://www.pytes.bplaced.net/files/dexs-pm-system/bugfix/dexs-pm-system_bugfix.zip">Mirror 1 - Download</a> 
+* BugFix Download: <a href="http://plugins.svn.wordpress.org/dexs-pm-system/branches/dexs-pm-system_bugfix.zip">Mirror 2 - Download</a>
 
-Thanks to:
-* <a href="http://wordpress.org/support/profile/divyansh2492">divyansh2492</a>
+* Thanks To: <a href="http://wordpress.org/support/profile/divyansh2492">divyansh2492</a>
 
 = French Translation =
-A french Translation for our Dexs PM System (v. 1.0.1)
+A french translation for our Dexs PM System (v. 1.0.1)
 
-Downloads:
-* <a href="http://pytes.net/languages/dexs-pm-system/1-3-0/dexs-pm-system_fr.zip">Main Download</a> 
-* <a href="http://pytes.bplaced.net/files/dexs-pm-system/translations/dexs-pm-system_fr.zipdexs-pm-system_bugfix.zip">Mirror 1 - Download</a>
-* <a href="http://plugins.svn.wordpress.org/dexs-pm-system/branches/dexs-pm-system_fr.zip">Mirror 2 - Download</a>
+* Download: <a href="http://pytes.net/languages/dexs-pm-system/1-3-0/dexs-pm-system_fr.zip">Main Download</a> 
+* Download: <a href="http://pytes.bplaced.net/files/dexs-pm-system/translations/dexs-pm-system_fr.zipdexs-pm-system_bugfix.zip">Mirror 1 - Download</a>
+* Download: <a href="http://plugins.svn.wordpress.org/dexs-pm-system/branches/dexs-pm-system_fr.zip">Mirror 2 - Download</a>
 
-Thanks to:
-* Drogrin (<a href="https://twitter.com/Drogrrin">@Drogrrin</a>)
-* Xéfir Destiny (<a href="https://twitter.com/Xefir_Destiny">Xefir Destiny</a>)
-* Radio Brony (a href="https://twitter.com/radiobrony">@radiobrony</a>) - <a href="http://www.radiobrony.fr/">Website</a>
+* Thanks To: Drogrin (<a href="https://twitter.com/Drogrrin">@Drogrrin</a>)
+* Thanks To: Xéfir Destiny (<a href="https://twitter.com/Xefir_Destiny">Xefir Destiny</a>)
+* Thanks To: Radio Brony (a href="https://twitter.com/radiobrony">@radiobrony</a>) - <a href="http://www.radiobrony.fr/">Website</a>
 
 = Stable Version =
 According to relevant tests should this version be bug-free. The PHP Parser Error could be fixed and otherwise we (and you) could find any other Fatal Errors. 

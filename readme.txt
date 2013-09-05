@@ -121,7 +121,7 @@ So you can contact us.
 *   Remove: “Hardcoded” URL Constants
 *   Fixed: Including Error
 *   Fixed: Fatal Error
-*   Fixed: 12 Small Script Bugs
+*   Fixed: 12 Small Script Bugs 
 *   Fixed: 14 Small Design Bugs
 
 = 0.9.1 (B.1) BETA =

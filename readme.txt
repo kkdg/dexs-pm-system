@@ -99,7 +99,7 @@ So you can contact us.
 
 = 1.0.0 (RC.1) Release Candidate =
 
-*   Add: PHP Classes
+*   Add: PHP Classes 
 *   Add: One-File Attachment System
 *   Add: Costum User Role - Support
 *   Add: A front-End PM Widget
